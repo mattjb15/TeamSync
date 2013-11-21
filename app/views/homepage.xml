@@ -1,0 +1,26 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<View id="header">
+			<View id="appIcon"></View>
+			<Label id="welcomeMessage">Welcome username </Label>
+			<View id="avatar"></View>
+		</View>	
+			<TableView>
+				<TableViewRow>
+					<View id="searchIcon"></View>
+					<Label id="searchLabel">Search </Label>
+					<View id="invitesIcon"></View>
+					<Label id="invitesLabel">Invites </Label>
+					<View id="addGroupIcon"></View>
+					<Label id="addGroupLabel">Add Group </Label>
+				</TableViewRow>
+				
+				<TableViewRow>
+					<Label class="groupSettingsLabel">Group Settings </Label>
+					<Label class="adminSettingsLabel">Admin Settings </Label>
+					<Label class="groupNameLabel">Group Name </Label>
+					<Label class="groupDescriptionLabel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  </Label>	
+				</TableViewRow>			
+			</TableView>
+	</Window>
+</Alloy>
