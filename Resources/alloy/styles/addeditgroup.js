@@ -1,6 +1,6 @@
 module.exports = [ {
     isClass: true,
-    priority: 10000.0025,
+    priority: 10000.0002,
     key: "container",
     style: {
         backgroundColor: "white",
@@ -8,7 +8,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0026,
+    priority: 100000.0003,
     key: "header",
     style: {
         height: "50dp",
@@ -16,7 +16,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0027,
+    priority: 100000.0004,
     key: "appTitle",
     style: {
         font: {
@@ -27,7 +27,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0028,
+    priority: 100000.0005,
     key: "appIcon",
     style: {
         width: "50dp",

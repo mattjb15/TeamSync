@@ -39,11 +39,11 @@ function Controller() {
         id: "avatar"
     });
     $.__views.header.add($.__views.avatar);
-    $.__views.__alloyId1 = Ti.UI.createTableViewRow({
-        id: "__alloyId1"
+    $.__views.__alloyId2 = Ti.UI.createTableViewRow({
+        id: "__alloyId2"
     });
-    var __alloyId2 = [];
-    __alloyId2.push($.__views.__alloyId1);
+    var __alloyId3 = [];
+    __alloyId3.push($.__views.__alloyId2);
     $.__views.searchIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -51,7 +51,7 @@ function Controller() {
         backgroundImage: "/placeholder.png",
         id: "searchIcon"
     });
-    $.__views.__alloyId1.add($.__views.searchIcon);
+    $.__views.__alloyId2.add($.__views.searchIcon);
     $.__views.searchLabel = Ti.UI.createLabel({
         width: "100dp",
         height: "100dp",
@@ -59,7 +59,7 @@ function Controller() {
         text: "Search",
         id: "searchLabel"
     });
-    $.__views.__alloyId1.add($.__views.searchLabel);
+    $.__views.__alloyId2.add($.__views.searchLabel);
     $.__views.invitesIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -67,7 +67,7 @@ function Controller() {
         backgroundImage: "/placeholder.png",
         id: "invitesIcon"
     });
-    $.__views.__alloyId1.add($.__views.invitesIcon);
+    $.__views.__alloyId2.add($.__views.invitesIcon);
     $.__views.invitesLabel = Ti.UI.createLabel({
         width: "100dp",
         height: "100dp",
@@ -75,7 +75,7 @@ function Controller() {
         text: "Invites",
         id: "invitesLabel"
     });
-    $.__views.__alloyId1.add($.__views.invitesLabel);
+    $.__views.__alloyId2.add($.__views.invitesLabel);
     $.__views.addGroupIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -83,7 +83,7 @@ function Controller() {
         backgroundImage: "/placeholder.png",
         id: "addGroupIcon"
     });
-    $.__views.__alloyId1.add($.__views.addGroupIcon);
+    $.__views.__alloyId2.add($.__views.addGroupIcon);
     $.__views.addGroupLabel = Ti.UI.createLabel({
         width: "100dp",
         height: "100dp",
@@ -91,48 +91,48 @@ function Controller() {
         text: "Add Group",
         id: "addGroupLabel"
     });
-    $.__views.__alloyId1.add($.__views.addGroupLabel);
-    $.__views.__alloyId3 = Ti.UI.createTableViewRow({
-        id: "__alloyId3"
+    $.__views.__alloyId2.add($.__views.addGroupLabel);
+    $.__views.__alloyId4 = Ti.UI.createTableViewRow({
+        id: "__alloyId4"
     });
-    __alloyId2.push($.__views.__alloyId3);
-    $.__views.__alloyId4 = Ti.UI.createLabel({
+    __alloyId3.push($.__views.__alloyId4);
+    $.__views.__alloyId5 = Ti.UI.createLabel({
         width: "100dp",
         height: "50dp",
         left: "5",
         text: "Group Settings",
-        id: "__alloyId4"
+        id: "__alloyId5"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId4);
-    $.__views.__alloyId5 = Ti.UI.createLabel({
+    $.__views.__alloyId4.add($.__views.__alloyId5);
+    $.__views.__alloyId6 = Ti.UI.createLabel({
         width: "100dp",
         height: "50dp",
         left: "115",
         text: "Admin Settings",
-        id: "__alloyId5"
+        id: "__alloyId6"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createLabel({
+    $.__views.__alloyId4.add($.__views.__alloyId6);
+    $.__views.__alloyId7 = Ti.UI.createLabel({
         width: "100dp",
         height: "50dp",
         left: "215",
         text: "Group Name",
-        id: "__alloyId6"
+        id: "__alloyId7"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId6);
-    $.__views.__alloyId7 = Ti.UI.createLabel({
+    $.__views.__alloyId4.add($.__views.__alloyId7);
+    $.__views.__alloyId8 = Ti.UI.createLabel({
         width: "100dp",
         height: "50dp",
         left: "315",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
-        id: "__alloyId7"
+        id: "__alloyId8"
     });
-    $.__views.__alloyId3.add($.__views.__alloyId7);
-    $.__views.__alloyId0 = Ti.UI.createTableView({
-        data: __alloyId2,
-        id: "__alloyId0"
+    $.__views.__alloyId4.add($.__views.__alloyId8);
+    $.__views.__alloyId1 = Ti.UI.createTableView({
+        data: __alloyId3,
+        id: "__alloyId1"
     });
-    $.__views.homepage.add($.__views.__alloyId0);
+    $.__views.homepage.add($.__views.__alloyId1);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

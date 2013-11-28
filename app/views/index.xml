@@ -3,6 +3,8 @@
 		
 		<Label id="signin" top="10" onClick="loadLogin">Sign In</Label>
 		<Label id="homepage" top="10" onClick="loadHomepage">Hompage</Label>
+		<Label id="addeditgroup" top="10" onClick="loadAddeditgroup">Add Edit Group</Label>
+		<Label id="signup" top="10" onClick="loadSignup">Sign Up</Label>
 		
 	</Window>
 </Alloy>

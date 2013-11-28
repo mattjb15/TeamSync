@@ -1,23 +1,23 @@
 function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "signin";
+    this.__controllerPath = "addeditgroup";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
     arguments[0] ? arguments[0]["$model"] : null;
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.signin = Ti.UI.createWindow({
+    $.__views.addeditgroup = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
-        id: "signin"
+        id: "addeditgroup"
     });
-    $.__views.signin && $.addTopLevelView($.__views.signin);
+    $.__views.addeditgroup && $.addTopLevelView($.__views.addeditgroup);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
         backgroundColor: "blue",
         id: "header"
     });
-    $.__views.signin.add($.__views.header);
+    $.__views.addeditgroup.add($.__views.header);
     $.__views.appIcon = Ti.UI.createView({
         width: "50dp",
         height: "50dp",
@@ -37,46 +37,33 @@ function Controller() {
     });
     $.__views.header.add($.__views.appTitle);
     $.__views.pageTitle = Ti.UI.createLabel({
-        text: "Sign In",
+        text: "Add/Edit Group",
         id: "pageTitle",
         top: "10"
     });
-    $.__views.signin.add($.__views.pageTitle);
-    $.__views.username = Ti.UI.createTextField({
-        id: "username",
+    $.__views.addeditgroup.add($.__views.pageTitle);
+    $.__views.GroupName = Ti.UI.createTextField({
+        id: "GroupName",
         top: "100",
         width: "250",
         height: "30",
-        hintText: "Username"
+        hintText: "Group Name"
     });
-    $.__views.signin.add($.__views.username);
-    $.__views.password = Ti.UI.createTextField({
-        id: "password",
-        passwordMask: "true",
+    $.__views.addeditgroup.add($.__views.GroupName);
+    $.__views.GrouDescription = Ti.UI.createTextField({
+        id: "GrouDescription",
         top: "10",
         width: "250",
         height: "30",
-        hintText: "Password"
+        hintText: "Group Description"
     });
-    $.__views.signin.add($.__views.password);
-    $.__views.__alloyId10 = Ti.UI.createButton({
-        title: "Sign In",
+    $.__views.addeditgroup.add($.__views.GrouDescription);
+    $.__views.__alloyId0 = Ti.UI.createButton({
+        title: "Add Group",
         top: "10",
-        id: "__alloyId10"
+        id: "__alloyId0"
     });
-    $.__views.signin.add($.__views.__alloyId10);
-    $.__views.__alloyId11 = Ti.UI.createButton({
-        title: "Sign Up",
-        top: "10",
-        id: "__alloyId11"
-    });
-    $.__views.signin.add($.__views.__alloyId11);
-    $.__views.resetPassword = Ti.UI.createLabel({
-        text: "Reset password...",
-        id: "resetPassword",
-        top: "10"
-    });
-    $.__views.signin.add($.__views.resetPassword);
+    $.__views.addeditgroup.add($.__views.__alloyId0);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

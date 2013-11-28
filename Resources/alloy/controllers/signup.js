@@ -1,23 +1,23 @@
 function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "signin";
+    this.__controllerPath = "signup";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
     arguments[0] ? arguments[0]["$model"] : null;
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.signin = Ti.UI.createWindow({
+    $.__views.signup = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
-        id: "signin"
+        id: "signup"
     });
-    $.__views.signin && $.addTopLevelView($.__views.signin);
+    $.__views.signup && $.addTopLevelView($.__views.signup);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
         backgroundColor: "blue",
         id: "header"
     });
-    $.__views.signin.add($.__views.header);
+    $.__views.signup.add($.__views.header);
     $.__views.appIcon = Ti.UI.createView({
         width: "50dp",
         height: "50dp",
@@ -37,19 +37,52 @@ function Controller() {
     });
     $.__views.header.add($.__views.appTitle);
     $.__views.pageTitle = Ti.UI.createLabel({
-        text: "Sign In",
+        text: "Sign Up",
         id: "pageTitle",
         top: "10"
     });
-    $.__views.signin.add($.__views.pageTitle);
+    $.__views.signup.add($.__views.pageTitle);
+    $.__views.emailAddress = Ti.UI.createTextField({
+        id: "emailAddress",
+        top: "10",
+        width: "250",
+        height: "30",
+        hintText: "Email Address"
+    });
+    $.__views.signup.add($.__views.emailAddress);
     $.__views.username = Ti.UI.createTextField({
         id: "username",
-        top: "100",
+        top: "10",
         width: "250",
         height: "30",
         hintText: "Username"
     });
-    $.__views.signin.add($.__views.username);
+    $.__views.signup.add($.__views.username);
+    $.__views.firstName = Ti.UI.createTextField({
+        id: "firstName",
+        top: "10",
+        width: "250",
+        height: "30",
+        hintText: "First Name"
+    });
+    $.__views.signup.add($.__views.firstName);
+    $.__views.lastName = Ti.UI.createTextField({
+        id: "lastName",
+        top: "10",
+        width: "250",
+        height: "30",
+        hintText: "Last Name"
+    });
+    $.__views.signup.add($.__views.lastName);
+    $.__views.confirmPassword = Ti.UI.createTextField({
+        id: "confirmPassword",
+        passwordMask: "true",
+        top: "10",
+        width: "250",
+        height: "30",
+        hintText: "Confirm Password"
+    });
+    $.__views.signup.add($.__views.confirmPassword);
     $.__views.password = Ti.UI.createTextField({
         id: "password",
         passwordMask: "true",
@@ -58,25 +91,13 @@ function Controller() {
         height: "30",
         hintText: "Password"
     });
-    $.__views.signin.add($.__views.password);
-    $.__views.__alloyId10 = Ti.UI.createButton({
-        title: "Sign In",
-        top: "10",
-        id: "__alloyId10"
-    });
-    $.__views.signin.add($.__views.__alloyId10);
-    $.__views.__alloyId11 = Ti.UI.createButton({
+    $.__views.signup.add($.__views.password);
+    $.__views.__alloyId12 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
-        id: "__alloyId11"
+        id: "__alloyId12"
     });
-    $.__views.signin.add($.__views.__alloyId11);
-    $.__views.resetPassword = Ti.UI.createLabel({
-        text: "Reset password...",
-        id: "resetPassword",
-        top: "10"
-    });
-    $.__views.signin.add($.__views.resetPassword);
+    $.__views.signup.add($.__views.__alloyId12);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

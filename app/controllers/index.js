@@ -12,5 +12,19 @@ function loadHomepage(e)
 	
 }
 
+function loadAddeditgroup(e)
+{
+	var win =Alloy.createController("addeditgroup").getView();
+	win.open();
+	
+}
+
+function loadSignup(e)
+{
+	var win =Alloy.createController("signup").getView();
+	win.open();
+	
+}
+
 
 $.index.open();

@@ -1,6 +1,6 @@
 module.exports = [ {
     isClass: true,
-    priority: 10000.0002,
+    priority: 10000.0007,
     key: "container",
     style: {
         backgroundColor: "white",
@@ -8,7 +8,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0013,
+    priority: 10000.0018,
     key: "groupSettingsLabel",
     style: {
         width: "100dp",
@@ -17,7 +17,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0014,
+    priority: 10000.0019,
     key: "adminSettingsLabel",
     style: {
         width: "100dp",
@@ -26,7 +26,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0015,
+    priority: 10000.002,
     key: "groupNameLabel",
     style: {
         width: "100dp",
@@ -35,7 +35,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0016,
+    priority: 10000.0021,
     key: "groupDescriptionLabel",
     style: {
         width: "100dp",
@@ -44,7 +44,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0003,
+    priority: 100000.0008,
     key: "header",
     style: {
         height: "50dp",
@@ -52,7 +52,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0004,
+    priority: 100000.0009,
     key: "appTitle",
     style: {
         font: {
@@ -63,7 +63,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0005,
+    priority: 100000.001,
     key: "appIcon",
     style: {
         width: "50dp",
@@ -73,7 +73,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0006,
+    priority: 100000.0011,
     key: "avatar",
     style: {
         width: "50dp",
@@ -83,7 +83,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0007,
+    priority: 100000.0012,
     key: "searchIcon",
     style: {
         width: "30dp",
@@ -93,7 +93,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0008,
+    priority: 100000.0013,
     key: "searchLabel",
     style: {
         width: "100dp",
@@ -102,7 +102,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0009,
+    priority: 100000.0014,
     key: "invitesIcon",
     style: {
         width: "30dp",
@@ -112,7 +112,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.001,
+    priority: 100000.0015,
     key: "invitesLabel",
     style: {
         width: "100dp",
@@ -121,7 +121,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0011,
+    priority: 100000.0016,
     key: "addGroupIcon",
     style: {
         width: "30dp",
@@ -131,7 +131,7 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0012,
+    priority: 100000.0017,
     key: "addGroupLabel",
     style: {
         width: "100dp",
