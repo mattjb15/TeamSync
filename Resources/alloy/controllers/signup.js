@@ -45,7 +45,7 @@ function Controller() {
     $.__views.emailAddress = Ti.UI.createTextField({
         id: "emailAddress",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "Email Address"
     });
@@ -53,7 +53,7 @@ function Controller() {
     $.__views.username = Ti.UI.createTextField({
         id: "username",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "Username"
     });
@@ -61,7 +61,7 @@ function Controller() {
     $.__views.firstName = Ti.UI.createTextField({
         id: "firstName",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "First Name"
     });
@@ -69,35 +69,36 @@ function Controller() {
     $.__views.lastName = Ti.UI.createTextField({
         id: "lastName",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "Last Name"
     });
     $.__views.signup.add($.__views.lastName);
-    $.__views.confirmPassword = Ti.UI.createTextField({
-        id: "confirmPassword",
-        passwordMask: "true",
-        top: "10",
-        width: "250",
-        height: "30",
-        hintText: "Confirm Password"
-    });
-    $.__views.signup.add($.__views.confirmPassword);
     $.__views.password = Ti.UI.createTextField({
         id: "password",
         passwordMask: "true",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "Password"
     });
     $.__views.signup.add($.__views.password);
-    $.__views.__alloyId12 = Ti.UI.createButton({
+    $.__views.confirmPassword = Ti.UI.createTextField({
+        id: "confirmPassword",
+        passwordMask: "true",
+        top: "10",
+        width: "75%",
+        height: "30",
+        hintText: "Confirm Password"
+    });
+    $.__views.signup.add($.__views.confirmPassword);
+    $.__views.__alloyId18 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
-        id: "__alloyId12"
+        width: "75%",
+        id: "__alloyId18"
     });
-    $.__views.signup.add($.__views.__alloyId12);
+    $.__views.signup.add($.__views.__alloyId18);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

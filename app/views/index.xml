@@ -5,6 +5,7 @@
 		<Label id="homepage" top="10" onClick="loadHomepage">Hompage</Label>
 		<Label id="addeditgroup" top="10" onClick="loadAddeditgroup">Add Edit Group</Label>
 		<Label id="signup" top="10" onClick="loadSignup">Sign Up</Label>
-		
+		<Label id="addevent" top="10" onClick="loadAddEvent">Add Event</Label>
+				
 	</Window>
 </Alloy>

@@ -44,23 +44,24 @@ function Controller() {
     $.__views.addeditgroup.add($.__views.pageTitle);
     $.__views.GroupName = Ti.UI.createTextField({
         id: "GroupName",
-        top: "100",
-        width: "250",
+        top: "25",
+        width: "75%",
         height: "30",
         hintText: "Group Name"
     });
     $.__views.addeditgroup.add($.__views.GroupName);
-    $.__views.GrouDescription = Ti.UI.createTextField({
-        id: "GrouDescription",
+    $.__views.GroupDescription = Ti.UI.createTextField({
+        id: "GroupDescription",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "Group Description"
     });
-    $.__views.addeditgroup.add($.__views.GrouDescription);
+    $.__views.addeditgroup.add($.__views.GroupDescription);
     $.__views.__alloyId0 = Ti.UI.createButton({
         title: "Add Group",
         top: "10",
+        width: "75%",
         id: "__alloyId0"
     });
     $.__views.addeditgroup.add($.__views.__alloyId0);

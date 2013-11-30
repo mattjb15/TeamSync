@@ -15,6 +15,10 @@ function Controller() {
         var win = Alloy.createController("signup").getView();
         win.open();
     }
+    function loadAddEvent() {
+        var win = Alloy.createController("addevent").getView();
+        win.open();
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -57,6 +61,13 @@ function Controller() {
     });
     $.__views.index.add($.__views.signup);
     loadSignup ? $.__views.signup.addEventListener("click", loadSignup) : __defers["$.__views.signup!click!loadSignup"] = true;
+    $.__views.addevent = Ti.UI.createLabel({
+        text: "Add Event",
+        id: "addevent",
+        top: "10"
+    });
+    $.__views.index.add($.__views.addevent);
+    loadAddEvent ? $.__views.addevent.addEventListener("click", loadAddEvent) : __defers["$.__views.addevent!click!loadAddEvent"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
@@ -64,6 +75,7 @@ function Controller() {
     __defers["$.__views.homepage!click!loadHomepage"] && $.__views.homepage.addEventListener("click", loadHomepage);
     __defers["$.__views.addeditgroup!click!loadAddeditgroup"] && $.__views.addeditgroup.addEventListener("click", loadAddeditgroup);
     __defers["$.__views.signup!click!loadSignup"] && $.__views.signup.addEventListener("click", loadSignup);
+    __defers["$.__views.addevent!click!loadAddEvent"] && $.__views.addevent.addEventListener("click", loadAddEvent);
     _.extend($, exports);
 }
 

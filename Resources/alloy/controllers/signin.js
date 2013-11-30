@@ -44,8 +44,8 @@ function Controller() {
     $.__views.signin.add($.__views.pageTitle);
     $.__views.username = Ti.UI.createTextField({
         id: "username",
-        top: "100",
-        width: "250",
+        top: "25",
+        width: "75%",
         height: "30",
         hintText: "Username"
     });
@@ -54,23 +54,25 @@ function Controller() {
         id: "password",
         passwordMask: "true",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "30",
         hintText: "Password"
     });
     $.__views.signin.add($.__views.password);
-    $.__views.__alloyId10 = Ti.UI.createButton({
+    $.__views.__alloyId16 = Ti.UI.createButton({
         title: "Sign In",
         top: "10",
-        id: "__alloyId10"
+        width: "75%",
+        id: "__alloyId16"
     });
-    $.__views.signin.add($.__views.__alloyId10);
-    $.__views.__alloyId11 = Ti.UI.createButton({
+    $.__views.signin.add($.__views.__alloyId16);
+    $.__views.__alloyId17 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
-        id: "__alloyId11"
+        width: "75%",
+        id: "__alloyId17"
     });
-    $.__views.signin.add($.__views.__alloyId11);
+    $.__views.signin.add($.__views.__alloyId17);
     $.__views.resetPassword = Ti.UI.createLabel({
         text: "Reset password...",
         id: "resetPassword",

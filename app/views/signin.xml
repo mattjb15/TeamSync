@@ -6,10 +6,10 @@
 		</View>	
 		
 		<Label id="pageTitle" top="10">Sign In</Label>
-		<TextField id="username"  top="100"  width="250" height="30" hintText="Username"/>
-		<TextField  id="password"  passwordMask="true" top="10"  width="250" height="30" hintText="Password"/>
-		<Button top="10">Sign In</Button>
-		<Button top="10">Sign Up</Button>
+		<TextField id="username"  top="25"  width="75%" height="30" hintText="Username"/>
+		<TextField  id="password"  passwordMask="true" top="10"  width="75%" height="30" hintText="Password"/>
+		<Button top="10" width="75%">Sign In</Button>
+		<Button top="10" width="75%">Sign Up</Button>
 		<Label id="resetPassword" top="10">Reset password...</Label>
 	</Window>
 </Alloy>

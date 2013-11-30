@@ -1,0 +1,24 @@
+".container": {
+	backgroundColor: "white",
+	layout: 'vertical'
+},
+
+"#header":{
+	height: "50dp",
+	backgroundColor: "blue"
+},
+
+"#appTitle":{
+	font:{
+		fontSize: "20dp",
+		fontWeight: "bold"
+	},
+	color:"#fff"
+}
+
+"#appIcon":{
+	width: "50dp",
+	height: "50dp",
+	left: "0",
+	backgroundImage: "/placeholder.png"
+}

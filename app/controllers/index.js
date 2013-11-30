@@ -26,5 +26,13 @@ function loadSignup(e)
 	
 }
 
+function loadAddEvent(e)
+{
+	var win =Alloy.createController("addevent").getView();
+	win.open();
+	
+}
+
+
 
 $.index.open();
