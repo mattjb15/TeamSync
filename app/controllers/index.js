@@ -33,6 +33,13 @@ function loadAddEvent(e)
 	
 }
 
+function loadAddNotice(e)
+{
+	var win =Alloy.createController("addnotice").getView();
+	win.open();
+	
+}
+
 
 
 $.index.open();

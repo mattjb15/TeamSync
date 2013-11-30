@@ -11,7 +11,6 @@
 "#appTitle":{
 	font:{
 		fontSize: "20dp",
-		fontWeight: "bold"
 	},
 	color:"#fff"
 },
@@ -61,7 +60,7 @@
 "#addGroupIcon":{
 	width: "30dp",
 	height: "30dp",
-	left: "280",
+	left: "280dp",
 	backgroundImage: "/placeholder.png"
 },
 
@@ -69,14 +68,20 @@
 	
 	width: "100dp",
 	height: "100dp",
-	left: "315"
+	left: "315dp"
 }
 
 ".groupSettingsLabel":{
 	
 	width: "100dp",
 	height: "50dp",
-	left: "5"
+	left: "5dp",
+		left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+}
+	
 	
 }
 
@@ -84,25 +89,138 @@
 	
 	width: "100dp",
 	height: "50dp",
-	left: "115"
+	left: "115dp"
 	
 }
 
-".groupNameLabel":{
+"#GroupNameLabel":{
 	
-	width: "100dp",
-	height: "50dp",
-	left: "215"
+	left: "5",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
 
 
 }
 
-".groupDescriptionLabel":{
+"#groupDescriptionLabel":{
 	
-	width: "100dp",
-	height: "50dp",
-	left: "315"
+	left: "5"
 }
+
+".verticalRowContainer":{
+	
+	layout: "vertical",	
+	height: Ti.UI.SIZE
+	
+}
+
+"#topRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#middleRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#bottomRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#settingsImage":{
+	
+	width: "30dp",
+	height: "30dp",
+	backgroundColor: "grey"
+}
+
+"#groupSettings":{
+	
+	left: "5dp",
+	left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+    }
+}
+
+
+"#joinRequests":{
+	
+	left: "30dp",
+		left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+    }
+}
+
+"#numberOfJoinRequests":{
+	
+	left: "20dp"
+}
+
+
+
+"#groupImage":{
+	
+	width: "60dp",
+	height: "60dp",
+	backgroundColor: "grey",
+	left: "5dp"
+	
+}
+
+
+"#innerMiddleContainer":{
+	
+	height: Ti.UI.FILL,
+	width: Ti.UI.SIZE,
+	layout: "vertical",
+	left: "20dp",
+}
+
+"#events":{
+	
+	left: "5dp",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+
+}
+
+"#notices":{
+	
+	left: "10dp",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+
+}
+
+
+
+
+
+
+
+
+
 
 
 

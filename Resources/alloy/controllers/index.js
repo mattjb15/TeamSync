@@ -19,6 +19,10 @@ function Controller() {
         var win = Alloy.createController("addevent").getView();
         win.open();
     }
+    function loadAddNotice() {
+        var win = Alloy.createController("addnotice").getView();
+        win.open();
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -33,13 +37,13 @@ function Controller() {
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.signin = Ti.UI.createLabel({
+    $.__views.signIn = Ti.UI.createLabel({
         text: "Sign In",
-        id: "signin",
+        id: "signIn",
         top: "10"
     });
-    $.__views.index.add($.__views.signin);
-    loadLogin ? $.__views.signin.addEventListener("click", loadLogin) : __defers["$.__views.signin!click!loadLogin"] = true;
+    $.__views.index.add($.__views.signIn);
+    loadLogin ? $.__views.signIn.addEventListener("click", loadLogin) : __defers["$.__views.signIn!click!loadLogin"] = true;
     $.__views.homepage = Ti.UI.createLabel({
         text: "Hompage",
         id: "homepage",
@@ -47,35 +51,42 @@ function Controller() {
     });
     $.__views.index.add($.__views.homepage);
     loadHomepage ? $.__views.homepage.addEventListener("click", loadHomepage) : __defers["$.__views.homepage!click!loadHomepage"] = true;
-    $.__views.addeditgroup = Ti.UI.createLabel({
+    $.__views.addEditGroup = Ti.UI.createLabel({
         text: "Add Edit Group",
-        id: "addeditgroup",
+        id: "addEditGroup",
         top: "10"
     });
-    $.__views.index.add($.__views.addeditgroup);
-    loadAddeditgroup ? $.__views.addeditgroup.addEventListener("click", loadAddeditgroup) : __defers["$.__views.addeditgroup!click!loadAddeditgroup"] = true;
-    $.__views.signup = Ti.UI.createLabel({
+    $.__views.index.add($.__views.addEditGroup);
+    loadAddeditgroup ? $.__views.addEditGroup.addEventListener("click", loadAddeditgroup) : __defers["$.__views.addEditGroup!click!loadAddeditgroup"] = true;
+    $.__views.signUp = Ti.UI.createLabel({
         text: "Sign Up",
-        id: "signup",
+        id: "signUp",
         top: "10"
     });
-    $.__views.index.add($.__views.signup);
-    loadSignup ? $.__views.signup.addEventListener("click", loadSignup) : __defers["$.__views.signup!click!loadSignup"] = true;
-    $.__views.addevent = Ti.UI.createLabel({
+    $.__views.index.add($.__views.signUp);
+    loadSignup ? $.__views.signUp.addEventListener("click", loadSignup) : __defers["$.__views.signUp!click!loadSignup"] = true;
+    $.__views.addEvent = Ti.UI.createLabel({
         text: "Add Event",
-        id: "addevent",
+        id: "addEvent",
         top: "10"
     });
-    $.__views.index.add($.__views.addevent);
-    loadAddEvent ? $.__views.addevent.addEventListener("click", loadAddEvent) : __defers["$.__views.addevent!click!loadAddEvent"] = true;
+    $.__views.index.add($.__views.addEvent);
+    loadAddEvent ? $.__views.addEvent.addEventListener("click", loadAddEvent) : __defers["$.__views.addEvent!click!loadAddEvent"] = true;
+    $.__views.addNotice = Ti.UI.createLabel({
+        id: "addNotice",
+        top: "10"
+    });
+    $.__views.index.add($.__views.addNotice);
+    loadAddNotice ? $.__views.addNotice.addEventListener("click", loadAddNotice) : __defers["$.__views.addNotice!click!loadAddNotice"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
-    __defers["$.__views.signin!click!loadLogin"] && $.__views.signin.addEventListener("click", loadLogin);
+    __defers["$.__views.signIn!click!loadLogin"] && $.__views.signIn.addEventListener("click", loadLogin);
     __defers["$.__views.homepage!click!loadHomepage"] && $.__views.homepage.addEventListener("click", loadHomepage);
-    __defers["$.__views.addeditgroup!click!loadAddeditgroup"] && $.__views.addeditgroup.addEventListener("click", loadAddeditgroup);
-    __defers["$.__views.signup!click!loadSignup"] && $.__views.signup.addEventListener("click", loadSignup);
-    __defers["$.__views.addevent!click!loadAddEvent"] && $.__views.addevent.addEventListener("click", loadAddEvent);
+    __defers["$.__views.addEditGroup!click!loadAddeditgroup"] && $.__views.addEditGroup.addEventListener("click", loadAddeditgroup);
+    __defers["$.__views.signUp!click!loadSignup"] && $.__views.signUp.addEventListener("click", loadSignup);
+    __defers["$.__views.addEvent!click!loadAddEvent"] && $.__views.addEvent.addEventListener("click", loadAddEvent);
+    __defers["$.__views.addNotice!click!loadAddNotice"] && $.__views.addNotice.addEventListener("click", loadAddNotice);
     _.extend($, exports);
 }
 

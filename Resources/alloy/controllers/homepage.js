@@ -39,11 +39,15 @@ function Controller() {
         id: "avatar"
     });
     $.__views.header.add($.__views.avatar);
-    $.__views.__alloyId8 = Ti.UI.createTableViewRow({
-        id: "__alloyId8"
+    $.__views.__alloyId13 = Ti.UI.createTableViewRow({
+        id: "__alloyId13"
     });
-    var __alloyId9 = [];
-    __alloyId9.push($.__views.__alloyId8);
+    var __alloyId14 = [];
+    __alloyId14.push($.__views.__alloyId13);
+    $.__views.__alloyId15 = Ti.UI.createView({
+        id: "__alloyId15"
+    });
+    $.__views.__alloyId13.add($.__views.__alloyId15);
     $.__views.searchIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -51,7 +55,7 @@ function Controller() {
         backgroundImage: "/placeholder.png",
         id: "searchIcon"
     });
-    $.__views.__alloyId8.add($.__views.searchIcon);
+    $.__views.__alloyId15.add($.__views.searchIcon);
     $.__views.searchLabel = Ti.UI.createLabel({
         width: "100dp",
         height: "100dp",
@@ -59,7 +63,7 @@ function Controller() {
         text: "Search",
         id: "searchLabel"
     });
-    $.__views.__alloyId8.add($.__views.searchLabel);
+    $.__views.__alloyId15.add($.__views.searchLabel);
     $.__views.invitesIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -67,7 +71,7 @@ function Controller() {
         backgroundImage: "/placeholder.png",
         id: "invitesIcon"
     });
-    $.__views.__alloyId8.add($.__views.invitesIcon);
+    $.__views.__alloyId15.add($.__views.invitesIcon);
     $.__views.invitesLabel = Ti.UI.createLabel({
         width: "100dp",
         height: "100dp",
@@ -75,64 +79,144 @@ function Controller() {
         text: "Invites",
         id: "invitesLabel"
     });
-    $.__views.__alloyId8.add($.__views.invitesLabel);
+    $.__views.__alloyId15.add($.__views.invitesLabel);
     $.__views.addGroupIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
-        left: "280",
+        left: "280dp",
         backgroundImage: "/placeholder.png",
         id: "addGroupIcon"
     });
-    $.__views.__alloyId8.add($.__views.addGroupIcon);
+    $.__views.__alloyId15.add($.__views.addGroupIcon);
     $.__views.addGroupLabel = Ti.UI.createLabel({
         width: "100dp",
         height: "100dp",
-        left: "315",
+        left: "315dp",
         text: "Add Group",
         id: "addGroupLabel"
     });
-    $.__views.__alloyId8.add($.__views.addGroupLabel);
-    $.__views.__alloyId10 = Ti.UI.createTableViewRow({
-        id: "__alloyId10"
+    $.__views.__alloyId15.add($.__views.addGroupLabel);
+    $.__views.__alloyId16 = Ti.UI.createTableViewRow({
+        height: Ti.UI.SIZE,
+        id: "__alloyId16"
     });
-    __alloyId9.push($.__views.__alloyId10);
-    $.__views.__alloyId11 = Ti.UI.createLabel({
-        width: "100dp",
-        height: "50dp",
-        left: "5",
+    __alloyId14.push($.__views.__alloyId16);
+    $.__views.__alloyId17 = Ti.UI.createView({
+        layout: "vertical",
+        height: Ti.UI.SIZE,
+        id: "__alloyId17"
+    });
+    $.__views.__alloyId16.add($.__views.__alloyId17);
+    $.__views.topRowContainer = Ti.UI.createView({
+        layout: "horizontal",
+        width: Ti.UI.FILL,
+        height: "60dp",
+        id: "topRowContainer"
+    });
+    $.__views.__alloyId17.add($.__views.topRowContainer);
+    $.__views.groupSettings = Ti.UI.createLabel({
+        left: "10dp",
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        },
         text: "Group Settings",
-        id: "__alloyId11"
+        id: "groupSettings"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId11);
-    $.__views.__alloyId12 = Ti.UI.createLabel({
-        width: "100dp",
-        height: "50dp",
-        left: "115",
-        text: "Admin Settings",
-        id: "__alloyId12"
+    $.__views.topRowContainer.add($.__views.groupSettings);
+    $.__views.settingsImage = Ti.UI.createView({
+        width: "30dp",
+        height: "30dp",
+        backgroundColor: "grey",
+        id: "settingsImage"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId12);
-    $.__views.__alloyId13 = Ti.UI.createLabel({
-        width: "100dp",
-        height: "50dp",
-        left: "215",
+    $.__views.topRowContainer.add($.__views.settingsImage);
+    $.__views.joinRequests = Ti.UI.createLabel({
+        left: "10dp",
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        },
+        text: "Join Requests",
+        id: "joinRequests"
+    });
+    $.__views.topRowContainer.add($.__views.joinRequests);
+    $.__views.numberOfJoinRequests = Ti.UI.createLabel({
+        left: "20dp",
+        text: "1",
+        id: "numberOfJoinRequests"
+    });
+    $.__views.topRowContainer.add($.__views.numberOfJoinRequests);
+    $.__views.middleRowContainer = Ti.UI.createView({
+        layout: "horizontal",
+        width: Ti.UI.FILL,
+        height: "60dp",
+        id: "middleRowContainer"
+    });
+    $.__views.__alloyId17.add($.__views.middleRowContainer);
+    $.__views.groupImage = Ti.UI.createView({
+        width: "60dp",
+        height: "60dp",
+        backgroundColor: "grey",
+        left: "5dp",
+        id: "groupImage"
+    });
+    $.__views.middleRowContainer.add($.__views.groupImage);
+    $.__views.innerMiddleContainer = Ti.UI.createView({
+        height: Ti.UI.FILL,
+        width: Ti.UI.SIZE,
+        layout: "vertical",
+        left: "20dp",
+        id: "innerMiddleContainer"
+    });
+    $.__views.middleRowContainer.add($.__views.innerMiddleContainer);
+    $.__views.GroupNameLabel = Ti.UI.createLabel({
+        left: "5",
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        },
         text: "Group Name",
-        id: "__alloyId13"
+        id: "GroupNameLabel"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId13);
-    $.__views.__alloyId14 = Ti.UI.createLabel({
-        width: "100dp",
-        height: "50dp",
-        left: "315",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor",
-        id: "__alloyId14"
+    $.__views.innerMiddleContainer.add($.__views.GroupNameLabel);
+    $.__views.GroupDescriptionLabel = Ti.UI.createLabel({
+        text: "Some Made up group description text",
+        id: "GroupDescriptionLabel"
     });
-    $.__views.__alloyId10.add($.__views.__alloyId14);
-    $.__views.__alloyId7 = Ti.UI.createTableView({
-        data: __alloyId9,
-        id: "__alloyId7"
+    $.__views.innerMiddleContainer.add($.__views.GroupDescriptionLabel);
+    $.__views.bottomRowContainer = Ti.UI.createView({
+        layout: "horizontal",
+        width: Ti.UI.FILL,
+        height: "60dp",
+        id: "bottomRowContainer"
     });
-    $.__views.homepage.add($.__views.__alloyId7);
+    $.__views.__alloyId17.add($.__views.bottomRowContainer);
+    $.__views.events = Ti.UI.createLabel({
+        left: "5dp",
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        },
+        text: "Events",
+        id: "events"
+    });
+    $.__views.bottomRowContainer.add($.__views.events);
+    $.__views.notices = Ti.UI.createLabel({
+        left: "10dp",
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        },
+        text: "Notices",
+        id: "notices"
+    });
+    $.__views.bottomRowContainer.add($.__views.notices);
+    $.__views.mainList = Ti.UI.createTableView({
+        data: __alloyId14,
+        id: "mainList"
+    });
+    $.__views.homepage.add($.__views.mainList);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);
