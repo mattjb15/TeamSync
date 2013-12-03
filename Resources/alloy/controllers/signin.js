@@ -14,7 +14,7 @@ function Controller() {
     $.__views.signin && $.addTopLevelView($.__views.signin);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
-        backgroundColor: "blue",
+        backgroundColor: "white",
         id: "header"
     });
     $.__views.signin.add($.__views.header);
@@ -22,7 +22,7 @@ function Controller() {
         width: "50dp",
         height: "50dp",
         left: "0",
-        backgroundImage: "/placeholder.png",
+        backgroundImage: "/ic_launcher.png",
         id: "appIcon"
     });
     $.__views.header.add($.__views.appIcon);
@@ -31,7 +31,7 @@ function Controller() {
             fontSize: "20dp",
             fontWeight: "bold"
         },
-        color: "#fff",
+        color: "black",
         text: "TeamSync",
         id: "appTitle"
     });

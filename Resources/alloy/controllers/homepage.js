@@ -14,7 +14,7 @@ function Controller() {
     $.__views.homepage && $.addTopLevelView($.__views.homepage);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
-        backgroundColor: "blue",
+        backgroundColor: "white",
         id: "header"
     });
     $.__views.homepage.add($.__views.header);
@@ -22,7 +22,7 @@ function Controller() {
         width: "50dp",
         height: "50dp",
         left: "0",
-        backgroundImage: "/placeholder.png",
+        backgroundImage: "/ic_launcher.png",
         id: "appIcon"
     });
     $.__views.header.add($.__views.appIcon);
@@ -52,13 +52,11 @@ function Controller() {
         width: "30dp",
         height: "30dp",
         left: "5",
-        backgroundImage: "/placeholder.png",
+        backgroundImage: "/Search-icon.png",
         id: "searchIcon"
     });
     $.__views.__alloyId15.add($.__views.searchIcon);
     $.__views.searchLabel = Ti.UI.createLabel({
-        width: "100dp",
-        height: "100dp",
         left: "40",
         text: "Search",
         id: "searchLabel"
@@ -68,13 +66,11 @@ function Controller() {
         width: "30dp",
         height: "30dp",
         left: "145",
-        backgroundImage: "/placeholder.png",
+        backgroundImage: "/Email-3-icon.png",
         id: "invitesIcon"
     });
     $.__views.__alloyId15.add($.__views.invitesIcon);
     $.__views.invitesLabel = Ti.UI.createLabel({
-        width: "100dp",
-        height: "100dp",
         left: "180",
         text: "Invites",
         id: "invitesLabel"
@@ -84,13 +80,11 @@ function Controller() {
         width: "30dp",
         height: "30dp",
         left: "280dp",
-        backgroundImage: "/placeholder.png",
+        backgroundImage: "/Plus-icon.png",
         id: "addGroupIcon"
     });
     $.__views.__alloyId15.add($.__views.addGroupIcon);
     $.__views.addGroupLabel = Ti.UI.createLabel({
-        width: "100dp",
-        height: "100dp",
         left: "315dp",
         text: "Add Group",
         id: "addGroupLabel"
@@ -127,7 +121,7 @@ function Controller() {
     $.__views.settingsImage = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
-        backgroundColor: "grey",
+        backgroundImage: "/Settings-icon.png",
         id: "settingsImage"
     });
     $.__views.topRowContainer.add($.__views.settingsImage);

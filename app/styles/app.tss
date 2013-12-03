@@ -1,0 +1,33 @@
+".container": {
+	backgroundColor: "white",
+	layout: 'vertical'
+},
+
+"#header":{
+	height: "50dp",
+	backgroundColor: "white"
+},
+
+"#appIcon":{
+	width: "50dp",
+	height: "50dp",
+	left: "0",
+	backgroundImage: "/ic_launcher.png"
+},
+
+"#appTitle":{
+	font:{
+		fontSize: "20dp",
+		fontWeight: "bold"
+	},
+	color:"black"
+},
+
+".Label": {
+	width: "100dp",
+	height: "100dp"
+}
+	
+
+
+

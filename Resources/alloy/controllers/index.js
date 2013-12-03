@@ -45,7 +45,7 @@ function Controller() {
     $.__views.index.add($.__views.signIn);
     loadLogin ? $.__views.signIn.addEventListener("click", loadLogin) : __defers["$.__views.signIn!click!loadLogin"] = true;
     $.__views.homepage = Ti.UI.createLabel({
-        text: "Hompage",
+        text: "Homepage",
         id: "homepage",
         top: "10"
     });
