@@ -15,6 +15,8 @@ function Controller() {
     $.__views.header = Ti.UI.createView({
         height: "50dp",
         backgroundColor: "white",
+        borderWidth: "1",
+        borderColor: "black",
         id: "header"
     });
     $.__views.addevent.add($.__views.header);

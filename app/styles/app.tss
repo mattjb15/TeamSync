@@ -5,7 +5,9 @@
 
 "#header":{
 	height: "50dp",
-	backgroundColor: "white"
+	backgroundColor: "white",
+	borderWidth: "1",
+	borderColor: "black"
 },
 
 "#appIcon":{
@@ -18,16 +20,12 @@
 "#appTitle":{
 	font:{
 		fontSize: "20dp",
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
 	color:"black"
-},
-
-".Label": {
-	width: "100dp",
-	height: "100dp"
 }
-	
+
+
 
 
 

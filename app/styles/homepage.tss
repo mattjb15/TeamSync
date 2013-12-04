@@ -8,45 +8,50 @@
 "#searchIcon":{
 	width: "30dp",
 	height: "30dp",
-	left: "5",
+	left: "1%",
 	backgroundImage: "/Search-icon.png"
 },
+".Label": {
+	width: "100dp",
+	height: "100dp",
+}
+	
 
 "#searchLabel":{
 	
-	left: "40"
+	left: "10%",
 },
 
 "#invitesIcon":{
 	width: "30dp",
 	height: "30dp",
-	left: "145",
+	left: "30%",
 	backgroundImage: "/Email-3-icon.png"
 },
 
 "#invitesLabel":{
 	
-	left: "180"
+	left: "40%"
 },
 
 "#addGroupIcon":{
 	width: "30dp",
 	height: "30dp",
-	left: "280dp",
+	left: "60%",
 	backgroundImage: "/Plus-icon.png"
 },
 
 "#addGroupLabel":{
 	
-	left: "315dp"
+	left: "70%"
 }
 
 ".groupSettingsLabel":{
 	
 	width: "100dp",
 	height: "50dp",
-	left: "5dp",
-		left: "10dp",
+	left: "1%",
+		//left: "10dp",
    font: {
     fontSize: "16dp",
     fontWeight: "bold"
@@ -112,6 +117,7 @@
 
 "#settingsImage":{
 	
+	left: "5%",
 	width: "30dp",
 	height: "30dp",
 	backgroundImage: "/Settings-icon.png"
@@ -119,8 +125,8 @@
 
 "#groupSettings":{
 	
-	left: "5dp",
-	left: "10dp",
+	left: "1%",
+	//left: "10dp",
    font: {
     fontSize: "16dp",
     fontWeight: "bold"
