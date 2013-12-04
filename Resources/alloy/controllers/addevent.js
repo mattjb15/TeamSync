@@ -93,6 +93,22 @@ function Controller() {
         id: "__alloyId5"
     });
     $.__views.column1.addRow($.__views.__alloyId5);
+    $.__views.eventDate = Ti.UI.createTextField({
+        id: "eventDate",
+        top: "10",
+        width: "75%",
+        height: "30",
+        hintText: "Event Date"
+    });
+    $.__views.addevent.add($.__views.eventDate);
+    $.__views.eventTime = Ti.UI.createTextField({
+        id: "eventTime",
+        top: "10",
+        width: "75%",
+        height: "30",
+        hintText: "Event Time"
+    });
+    $.__views.addevent.add($.__views.eventTime);
     $.__views.__alloyId6 = Ti.UI.createButton({
         title: "Add Event",
         top: "10",

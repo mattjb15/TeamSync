@@ -16,6 +16,8 @@
                 <PickerRow title="role 4"/>
             </PickerColumn>
         </Picker>
+        <TextField  id="eventDate" top="10"  width="75%" height="30" hintText="Event Date"/>	
+        <TextField  id="eventTime" top="10"  width="75%" height="30" hintText="Event Time"/>	
 		<Button top="10" width="75%">Add Event</Button>
 		
 	</Window>

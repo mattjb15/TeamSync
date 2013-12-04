@@ -41,5 +41,22 @@ function loadAddNotice(e)
 }
 
 
+function loadNotices(e)
+{
+	var win =Alloy.createController("notices").getView();
+	win.open();
+	
+}
+
+function loadEvents(e)
+{
+	var win =Alloy.createController("events").getView();
+	win.open();
+	
+}
+
+
+
+
 
 $.index.open();

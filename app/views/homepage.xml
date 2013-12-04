@@ -38,6 +38,7 @@
 								<Label id="events">Events</Label>
 								<Label id="notices">Notices</Label>
 							</View>
+					
 						</View>						
 				</TableViewRow>			
 			</TableView>

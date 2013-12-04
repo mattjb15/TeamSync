@@ -8,10 +8,35 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0038,
-    key: "container",
+    priority: 10000.0008,
+    key: "eventName",
     style: {
-        backgroundColor: "red"
+        left: "5dp",
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        }
+    }
+}, {
+    isClass: true,
+    priority: 10000.0009,
+    key: "eventDescription",
+    style: {
+        left: "5dp"
+    }
+}, {
+    isClass: true,
+    priority: 10000.001,
+    key: "eventDateLabel",
+    style: {
+        left: "5dp"
+    }
+}, {
+    isClass: true,
+    priority: 10000.0011,
+    key: "eventDate",
+    style: {
+        left: "5dp"
     }
 }, {
     isId: true,
@@ -43,5 +68,15 @@ module.exports = [ {
             fontWeight: "bold"
         },
         color: "black"
+    }
+}, {
+    isId: true,
+    priority: 100000.0007,
+    key: "groupImage",
+    style: {
+        width: "50dp",
+        height: "50dp",
+        right: "0",
+        backgroundImage: "/placeholder.png"
     }
 } ];

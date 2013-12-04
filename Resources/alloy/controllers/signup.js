@@ -94,13 +94,13 @@ function Controller() {
         hintText: "Confirm Password"
     });
     $.__views.signup.add($.__views.confirmPassword);
-    $.__views.__alloyId21 = Ti.UI.createButton({
+    $.__views.__alloyId32 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
         width: "75%",
-        id: "__alloyId21"
+        id: "__alloyId32"
     });
-    $.__views.signup.add($.__views.__alloyId21);
+    $.__views.signup.add($.__views.__alloyId32);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

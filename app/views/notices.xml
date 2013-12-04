@@ -1,0 +1,17 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<View id="header">
+			<View id="appIcon"></View>
+			<Label id="groupName">Notices for group name </Label>
+			<View id="groupImage"></View>
+		</View>	
+			<TableView id="mainList">
+				<TableViewRow>
+					<View class="rowContainer" layout="vertical" height="Ti.UI.SIZE">	
+						<Label id="noticeName">notice name </Label>
+						<Label id="noticeDescription">The notice text goes here!!!! </Label>
+					</View>>	
+				</TableViewRow>		
+			</TableView>
+	</Window>
+</Alloy>

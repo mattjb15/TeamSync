@@ -61,20 +61,20 @@ function Controller() {
         hintText: "Password"
     });
     $.__views.signin.add($.__views.password);
-    $.__views.__alloyId19 = Ti.UI.createButton({
+    $.__views.__alloyId30 = Ti.UI.createButton({
         title: "Sign In",
         top: "10",
         width: "75%",
-        id: "__alloyId19"
+        id: "__alloyId30"
     });
-    $.__views.signin.add($.__views.__alloyId19);
-    $.__views.__alloyId20 = Ti.UI.createButton({
+    $.__views.signin.add($.__views.__alloyId30);
+    $.__views.__alloyId31 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
         width: "75%",
-        id: "__alloyId20"
+        id: "__alloyId31"
     });
-    $.__views.signin.add($.__views.__alloyId20);
+    $.__views.signin.add($.__views.__alloyId31);
     $.__views.resetPassword = Ti.UI.createLabel({
         text: "Reset password...",
         id: "resetPassword",

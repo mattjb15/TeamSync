@@ -1,0 +1,19 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<View id="header">
+			<View id="appIcon"></View>
+			<Label id="groupName">Events for group name </Label>
+			<View id="groupImage"></View>
+		</View>	
+			<TableView class="mainList">
+				<TableViewRow height="Ti.UI.SIZE" layout="vertical">
+							<Label class="eventName">Event Name </Label>
+							<Label class="eventDescription">Event description Event description Event description </Label>
+							<View  height="Ti.UI.SIZE" layout="horizontal">>
+								<Label class="eventDateLabel">Date: </Label>
+								<Label class="eventDate">12/12/2013 </Label>
+							</View>
+				</TableViewRow>		
+			</TableView>
+	</Window>
+</Alloy>

@@ -8,10 +8,11 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0038,
-    key: "container",
+    priority: 10000.0041,
+    key: "Label",
     style: {
-        backgroundColor: "red"
+        width: "100dp",
+        height: "100dp"
     }
 }, {
     isId: true,
@@ -43,5 +44,25 @@ module.exports = [ {
             fontWeight: "bold"
         },
         color: "black"
+    }
+}, {
+    isId: true,
+    priority: 100000.004,
+    key: "groupImage",
+    style: {
+        width: "50dp",
+        height: "50dp",
+        right: "0",
+        backgroundImage: "/placeholder.png"
+    }
+}, {
+    isId: true,
+    priority: 100000.0042,
+    key: "noticeName",
+    style: {
+        font: {
+            fontSize: "16dp",
+            fontWeight: "bold"
+        }
     }
 } ];
