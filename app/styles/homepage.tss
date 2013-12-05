@@ -2,7 +2,7 @@
 	width: "50dp",
 	height: "50dp",
 	right: "0",
-	backgroundImage: "/placeholder.png"
+	backgroundImage: "/man-silhouette.png"
 },
 
 "#searchIcon":{
@@ -155,10 +155,10 @@
 	
 	width: "60dp",
 	height: "60dp",
-	backgroundColor: "grey",
+	backgroundImage: "/groupImage.png",
 	left: "5dp"
 	
-}
+},
 
 
 "#innerMiddleContainer":{
@@ -181,14 +181,27 @@
 
 "#notices":{
 	
-	left: "10dp",
+	left: "95dp",
 	   font: {
         fontSize: "16dp",
         fontWeight: "bold"
     }
 
-}
+},
 
+"#noticesImage":{
+	left: "5dp",
+	width: "30dp",
+	height: "30dp",
+	backgroundImage: "/notices.png"
+},
+
+"#eventsImage":{
+	left: "5dp",
+	width: "30dp",
+	height: "30dp",
+	backgroundImage: "/events.png"
+}
 
 
 

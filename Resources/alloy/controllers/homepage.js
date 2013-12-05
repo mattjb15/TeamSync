@@ -37,7 +37,7 @@ function Controller() {
         width: "50dp",
         height: "50dp",
         right: "0",
-        backgroundImage: "/placeholder.png",
+        backgroundImage: "/man-silhouette.png",
         id: "avatar"
     });
     $.__views.header.add($.__views.avatar);
@@ -154,7 +154,7 @@ function Controller() {
     $.__views.groupImage = Ti.UI.createView({
         width: "60dp",
         height: "60dp",
-        backgroundColor: "grey",
+        backgroundImage: "/groupImage.png",
         left: "5dp",
         id: "groupImage"
     });
@@ -199,8 +199,16 @@ function Controller() {
         id: "events"
     });
     $.__views.bottomRowContainer.add($.__views.events);
+    $.__views.eventsImage = Ti.UI.createView({
+        left: "5dp",
+        width: "30dp",
+        height: "30dp",
+        backgroundImage: "/events.png",
+        id: "eventsImage"
+    });
+    $.__views.bottomRowContainer.add($.__views.eventsImage);
     $.__views.notices = Ti.UI.createLabel({
-        left: "10dp",
+        left: "95dp",
         font: {
             fontSize: "16dp",
             fontWeight: "bold"
@@ -209,6 +217,14 @@ function Controller() {
         id: "notices"
     });
     $.__views.bottomRowContainer.add($.__views.notices);
+    $.__views.noticesImage = Ti.UI.createView({
+        left: "5dp",
+        width: "30dp",
+        height: "30dp",
+        backgroundImage: "/notices.png",
+        id: "noticesImage"
+    });
+    $.__views.bottomRowContainer.add($.__views.noticesImage);
     $.__views.mainList = Ti.UI.createTableView({
         data: __alloyId22,
         id: "mainList"

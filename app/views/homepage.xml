@@ -36,7 +36,9 @@
 							</View>
 							<View id="bottomRowContainer">
 								<Label id="events">Events</Label>
+								<View id= "eventsImage"></View>
 								<Label id="notices">Notices</Label>
+								<View id= "noticesImage"></View>
 							</View>
 					
 						</View>						
