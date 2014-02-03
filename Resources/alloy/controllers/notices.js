@@ -37,21 +37,21 @@ function Controller() {
         width: "50dp",
         height: "50dp",
         right: "0",
-        backgroundImage: "/groupImage.png",
+        backgroundImage: "/placeholder.png",
         id: "groupImage"
     });
     $.__views.header.add($.__views.groupImage);
-    $.__views.__alloyId27 = Ti.UI.createTableViewRow({
-        id: "__alloyId27"
+    $.__views.__alloyId38 = Ti.UI.createTableViewRow({
+        id: "__alloyId38"
     });
-    var __alloyId28 = [];
-    __alloyId28.push($.__views.__alloyId27);
-    $.__views.__alloyId29 = Ti.UI.createView({
+    var __alloyId39 = [];
+    __alloyId39.push($.__views.__alloyId38);
+    $.__views.__alloyId40 = Ti.UI.createView({
         layout: "vertical",
         height: Ti.UI.SIZE,
-        id: "__alloyId29"
+        id: "__alloyId40"
     });
-    $.__views.__alloyId27.add($.__views.__alloyId29);
+    $.__views.__alloyId38.add($.__views.__alloyId40);
     $.__views.noticeName = Ti.UI.createLabel({
         font: {
             fontSize: "16dp",
@@ -60,14 +60,14 @@ function Controller() {
         text: "notice name",
         id: "noticeName"
     });
-    $.__views.__alloyId29.add($.__views.noticeName);
+    $.__views.__alloyId40.add($.__views.noticeName);
     $.__views.noticeDescription = Ti.UI.createLabel({
         text: "The notice text goes here!!!!",
         id: "noticeDescription"
     });
-    $.__views.__alloyId29.add($.__views.noticeDescription);
+    $.__views.__alloyId40.add($.__views.noticeDescription);
     $.__views.mainList = Ti.UI.createTableView({
-        data: __alloyId28,
+        data: __alloyId39,
         id: "mainList"
     });
     $.__views.notices.add($.__views.mainList);

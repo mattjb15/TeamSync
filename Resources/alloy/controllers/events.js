@@ -37,7 +37,7 @@ function Controller() {
         width: "50dp",
         height: "50dp",
         right: "0",
-        backgroundImage: "/groupImage.png",
+        backgroundImage: "/placeholder.png",
         id: "groupImage"
     });
     $.__views.header.add($.__views.groupImage);

@@ -1,4 +1,19 @@
 function Controller() {
+    function loadSignup() {
+        var win = Alloy.createController("signup").getView();
+        win.open();
+        $.signinWin.close();
+    }
+    function login() {
+        if ("" != $.username.value && "" != $.password.value) {
+            loginReq.open("POST", "http://sheffieldbears.com/teamsync/login.php");
+            var params = {
+                username: $.username.value,
+                password: Ti.Utils.md5HexDigest($.password.value)
+            };
+            loginReq.send(params);
+        } else alert("Username/Password are required");
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "signin";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -6,12 +21,13 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.signin = Ti.UI.createWindow({
+    var __defers = {};
+    $.__views.signinWin = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
-        id: "signin"
+        id: "signinWin"
     });
-    $.__views.signin && $.addTopLevelView($.__views.signin);
+    $.__views.signinWin && $.addTopLevelView($.__views.signinWin);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
         backgroundColor: "white",
@@ -19,7 +35,7 @@ function Controller() {
         borderColor: "black",
         id: "header"
     });
-    $.__views.signin.add($.__views.header);
+    $.__views.signinWin.add($.__views.header);
     $.__views.appIcon = Ti.UI.createView({
         width: "50dp",
         height: "50dp",
@@ -28,6 +44,11 @@ function Controller() {
         id: "appIcon"
     });
     $.__views.header.add($.__views.appIcon);
+    try {
+        $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
+    } catch (e) {
+        __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] = true;
+    }
     $.__views.appTitle = Ti.UI.createLabel({
         font: {
             fontSize: "20dp",
@@ -43,46 +64,61 @@ function Controller() {
         id: "pageTitle",
         top: "10"
     });
-    $.__views.signin.add($.__views.pageTitle);
+    $.__views.signinWin.add($.__views.pageTitle);
     $.__views.username = Ti.UI.createTextField({
         id: "username",
-        top: "25",
-        width: "75%",
-        height: "30",
+        top: "100",
+        width: "250",
+        height: "60",
         hintText: "Username"
     });
-    $.__views.signin.add($.__views.username);
+    $.__views.signinWin.add($.__views.username);
     $.__views.password = Ti.UI.createTextField({
         id: "password",
         passwordMask: "true",
         top: "10",
-        width: "75%",
-        height: "30",
+        width: "250",
+        height: "60",
         hintText: "Password"
     });
-    $.__views.signin.add($.__views.password);
-    $.__views.__alloyId30 = Ti.UI.createButton({
+    $.__views.signinWin.add($.__views.password);
+    $.__views.__alloyId41 = Ti.UI.createButton({
         title: "Sign In",
         top: "10",
-        width: "75%",
-        id: "__alloyId30"
+        id: "__alloyId41"
     });
-    $.__views.signin.add($.__views.__alloyId30);
-    $.__views.__alloyId31 = Ti.UI.createButton({
+    $.__views.signinWin.add($.__views.__alloyId41);
+    login ? $.__views.__alloyId41.addEventListener("click", login) : __defers["$.__views.__alloyId41!click!login"] = true;
+    $.__views.__alloyId42 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
-        width: "75%",
-        id: "__alloyId31"
+        id: "__alloyId42"
     });
-    $.__views.signin.add($.__views.__alloyId31);
+    $.__views.signinWin.add($.__views.__alloyId42);
+    loadSignup ? $.__views.__alloyId42.addEventListener("click", loadSignup) : __defers["$.__views.__alloyId42!click!loadSignup"] = true;
     $.__views.resetPassword = Ti.UI.createLabel({
         text: "Reset password...",
         id: "resetPassword",
         top: "10"
     });
-    $.__views.signin.add($.__views.resetPassword);
+    $.__views.signinWin.add($.__views.resetPassword);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var loginReq = Titanium.Network.createHTTPClient();
+    loginReq.onload = function() {
+        var json = this.responseText;
+        var response = JSON.parse(json);
+        if (true == response.logged) {
+            Alloy.Globals.username = response.username;
+            Alloy.Globals.user_id = response.id;
+            var win = Alloy.createController("homepage").getView();
+            win.open();
+            $.signinWin.close();
+        } else alert(response.message);
+    };
+    __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
+    __defers["$.__views.__alloyId41!click!login"] && $.__views.__alloyId41.addEventListener("click", login);
+    __defers["$.__views.__alloyId42!click!loadSignup"] && $.__views.__alloyId42.addEventListener("click", loadSignup);
     _.extend($, exports);
 }
 

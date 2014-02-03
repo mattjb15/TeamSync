@@ -1,8 +1,8 @@
 <Alloy>
-	<Window class="container" layout="vertical">
+	<Window class="container" layout="vertical" id="homepageWin">
 		<View id="header">
 			<View id="appIcon"></View>
-			<Label id="welcomeMessage">Welcome username </Label>
+			<Label id="welcomeMessage">Welcome username</Label>
 			<View id="avatar"></View>
 		</View>	
 			<TableView id="mainList">
@@ -12,37 +12,11 @@
 						<Label id="searchLabel">Search </Label>
 						<View id="invitesIcon"></View>
 						<Label id="invitesLabel">Invites </Label>
-						<View id="addGroupIcon"></View>
-						<Label id="addGroupLabel">Add Group </Label>
-					</View>>	
+						<View id="addGroupIcon" onClick="loadaddgroup"></View>
+						<Label id="addGroupLabel" onClick="loadaddgroup">Add Group </Label>
+					</View>	
 				</TableViewRow>
 				
-				<TableViewRow height="Ti.UI.SIZE">
-						<View class="verticalRowContainer">
-							<View id="topRowContainer">
-								<Label id="groupSettings">Group Settings</Label>
-								<View id="settingsImage"></View>
-								<Label id="joinRequests">Join Requests</Label>
-								<Label id="numberOfJoinRequests">1</Label>
-							</View>
-							<View id="middleRowContainer">
-								<View id="groupImage"></View>
-								
-								<View id="innerMiddleContainer">
-									<Label id="GroupNameLabel">Group Name</Label>
-									<Label id="GroupDescriptionLabel">Some Made up group description text</Label>
-								</View>						
-							
-							</View>
-							<View id="bottomRowContainer">
-								<Label id="events">Events</Label>
-								<View id= "eventsImage"></View>
-								<Label id="notices">Notices</Label>
-								<View id= "noticesImage"></View>
-							</View>
-					
-						</View>						
-				</TableViewRow>			
 			</TableView>
 	</Window>
 </Alloy>

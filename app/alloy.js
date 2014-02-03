@@ -9,3 +9,9 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+Alloy.Globals.loadIndex = function(e)
+{
+	var win = Alloy.createController("index").getView();
+	win.open();
+};

@@ -23,14 +23,6 @@ function Controller() {
         var win = Alloy.createController("addnotice").getView();
         win.open();
     }
-    function loadNotices() {
-        var win = Alloy.createController("notices").getView();
-        win.open();
-    }
-    function loadEvents() {
-        var win = Alloy.createController("events").getView();
-        win.open();
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -53,7 +45,7 @@ function Controller() {
     $.__views.index.add($.__views.signIn);
     loadLogin ? $.__views.signIn.addEventListener("click", loadLogin) : __defers["$.__views.signIn!click!loadLogin"] = true;
     $.__views.homepage = Ti.UI.createLabel({
-        text: "Homepage",
+        text: "Hompage",
         id: "homepage",
         top: "10"
     });
@@ -87,20 +79,6 @@ function Controller() {
     });
     $.__views.index.add($.__views.addNotice);
     loadAddNotice ? $.__views.addNotice.addEventListener("click", loadAddNotice) : __defers["$.__views.addNotice!click!loadAddNotice"] = true;
-    $.__views.notices = Ti.UI.createLabel({
-        text: "Notices",
-        id: "notices",
-        top: "10"
-    });
-    $.__views.index.add($.__views.notices);
-    loadNotices ? $.__views.notices.addEventListener("click", loadNotices) : __defers["$.__views.notices!click!loadNotices"] = true;
-    $.__views.events = Ti.UI.createLabel({
-        text: "Events",
-        id: "events",
-        top: "10"
-    });
-    $.__views.index.add($.__views.events);
-    loadEvents ? $.__views.events.addEventListener("click", loadEvents) : __defers["$.__views.events!click!loadEvents"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
@@ -110,8 +88,6 @@ function Controller() {
     __defers["$.__views.signUp!click!loadSignup"] && $.__views.signUp.addEventListener("click", loadSignup);
     __defers["$.__views.addEvent!click!loadAddEvent"] && $.__views.addEvent.addEventListener("click", loadAddEvent);
     __defers["$.__views.addNotice!click!loadAddNotice"] && $.__views.addNotice.addEventListener("click", loadAddNotice);
-    __defers["$.__views.notices!click!loadNotices"] && $.__views.notices.addEventListener("click", loadNotices);
-    __defers["$.__views.events!click!loadEvents"] && $.__views.events.addEventListener("click", loadEvents);
     _.extend($, exports);
 }
 

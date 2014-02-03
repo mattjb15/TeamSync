@@ -1,17 +1,17 @@
 function Controller() {
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "addevent";
+    this.__controllerPath = "groupEvents";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
     arguments[0] ? arguments[0]["$model"] : null;
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.addevent = Ti.UI.createWindow({
+    $.__views.groupEvents = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
-        id: "addevent"
+        id: "groupEvents"
     });
-    $.__views.addevent && $.addTopLevelView($.__views.addevent);
+    $.__views.groupEvents && $.addTopLevelView($.__views.groupEvents);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
         backgroundColor: "white",
@@ -19,7 +19,7 @@ function Controller() {
         borderColor: "black",
         id: "header"
     });
-    $.__views.addevent.add($.__views.header);
+    $.__views.groupEvents.add($.__views.header);
     $.__views.appIcon = Ti.UI.createView({
         width: "50dp",
         height: "50dp",
@@ -43,7 +43,7 @@ function Controller() {
         id: "pageTitle",
         top: "10"
     });
-    $.__views.addevent.add($.__views.pageTitle);
+    $.__views.groupEvents.add($.__views.pageTitle);
     $.__views.eventName = Ti.UI.createTextField({
         id: "eventName",
         top: "25",
@@ -51,7 +51,7 @@ function Controller() {
         height: "30",
         hintText: "Event Name"
     });
-    $.__views.addevent.add($.__views.eventName);
+    $.__views.groupEvents.add($.__views.eventName);
     $.__views.eventDescription = Ti.UI.createTextField({
         id: "eventDescription",
         top: "10",
@@ -59,7 +59,7 @@ function Controller() {
         height: "30",
         hintText: "Event Description"
     });
-    $.__views.addevent.add($.__views.eventDescription);
+    $.__views.groupEvents.add($.__views.eventDescription);
     $.__views.picker = Ti.UI.createPicker({
         id: "picker",
         top: "10",
@@ -68,40 +68,43 @@ function Controller() {
         width: "75%",
         height: "120"
     });
-    $.__views.addevent.add($.__views.picker);
+    $.__views.groupEvents.add($.__views.picker);
     $.__views.column1 = Ti.UI.createPickerColumn({
         id: "column1"
     });
     $.__views.picker.add($.__views.column1);
-    $.__views.__alloyId2 = Ti.UI.createPickerRow({
+    $.__views.__alloyId22 = Ti.UI.createPickerRow({
         title: "role 1",
-        id: "__alloyId2"
+        id: "__alloyId22"
     });
-    $.__views.column1.addRow($.__views.__alloyId2);
-    $.__views.__alloyId3 = Ti.UI.createPickerRow({
+    $.__views.column1.addRow($.__views.__alloyId22);
+    $.__views.__alloyId23 = Ti.UI.createPickerRow({
         title: "role 2",
-        id: "__alloyId3"
+        id: "__alloyId23"
     });
-    $.__views.column1.addRow($.__views.__alloyId3);
-    $.__views.__alloyId4 = Ti.UI.createPickerRow({
+    $.__views.column1.addRow($.__views.__alloyId23);
+    $.__views.__alloyId24 = Ti.UI.createPickerRow({
         title: "role 3",
-        id: "__alloyId4"
+        id: "__alloyId24"
     });
-    $.__views.column1.addRow($.__views.__alloyId4);
-    $.__views.__alloyId5 = Ti.UI.createPickerRow({
+    $.__views.column1.addRow($.__views.__alloyId24);
+    $.__views.__alloyId25 = Ti.UI.createPickerRow({
         title: "role 4",
-        id: "__alloyId5"
+        id: "__alloyId25"
     });
-    $.__views.column1.addRow($.__views.__alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createButton({
+    $.__views.column1.addRow($.__views.__alloyId25);
+    $.__views.__alloyId26 = Ti.UI.createButton({
         title: "Add Event",
         top: "10",
         width: "75%",
-        id: "__alloyId6"
+        id: "__alloyId26"
     });
-    $.__views.addevent.add($.__views.__alloyId6);
+    $.__views.groupEvents.add($.__views.__alloyId26);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var args = arguments[0] || {};
+    $.GroupNameLabel.text = args.groupName;
+    $.GroupDescriptionLabel.text = args.groupDescription;
     _.extend($, exports);
 }
 

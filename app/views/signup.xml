@@ -1,17 +1,17 @@
 <Alloy>
-	<Window class="container" layout="vertical">
+	<Window class="container" layout="vertical" id="signupWin">
 		<View id="header">
-			<View id="appIcon"></View>
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
 			<Label id="appTitle">TeamSync</Label>
 		</View>	
 		
 		<Label id="pageTitle" top="10">Sign Up</Label>
-		<TextField id="emailAddress"  top="10"  width="75%" height="30" hintText="Email Address"/>
-		<TextField id="username"  top="10"  width="75%" height="30" hintText="Username"/>
-		<TextField id="firstName"  top="10"  width="75%" height="30" hintText="First Name"/>
-		<TextField id="lastName"  top="10"  width="75%" height="30" hintText="Last Name"/>
-		<TextField  id="password"  passwordMask="true" top="10"  width="75%" height="30" hintText="Password"/>
-		<TextField  id="confirmPassword"  passwordMask="true" top="10"  width="75%" height="30" hintText="Confirm Password"/>
-		<Button top="10" width="75%">Sign Up</Button>
+		<TextField id="emailAddress"  top="10"  width="250" height="30" hintText="Email Address"/>
+		<TextField id="username"  top="10"  width="250" height="30" hintText="Username"/>
+		<TextField id="firstName"  top="10"  width="250" height="30" hintText="First Name"/>
+		<TextField id="lastName"  top="10"  width="250" height="30" hintText="Last Name"/>
+		<TextField  id="password"  passwordMask="true" top="10"  width="250" height="30" hintText="Password"/>
+		<TextField  id="confirmPassword"  passwordMask="true" top="10"  width="250" height="30" hintText="Confirm Password"/>
+		<Button top="10" onClick="clickSignup">Sign Up</Button>
 	</Window>
 </Alloy>

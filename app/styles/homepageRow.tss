@@ -1,0 +1,156 @@
+/*
+".groupSettingsLabel":{
+	
+	width: "100dp",
+	height: "50dp",
+	left: "1%",
+		//left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+}
+	
+	
+}
+
+".adminSettingsLabel":{
+	
+	width: "100dp",
+	height: "50dp",
+	left: "115dp"
+	
+}
+
+"#GroupNameLabel":{
+	
+	left: "5",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+
+
+}
+
+"#groupDescriptionLabel":{
+	
+	left: "5"
+}
+
+".verticalRowContainer":{
+	
+	layout: "vertical",	
+	height: Ti.UI.SIZE
+	
+}
+
+"#topRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#middleRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#bottomRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#settingsImage":{
+	
+	left: "5%",
+	width: "30dp",
+	height: "30dp",
+	backgroundImage: "/Settings-icon.png"
+}
+
+"#groupSettings":{
+	
+	left: "1%",
+	//left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+    }
+}
+
+
+"#joinRequests":{
+	
+	left: "30dp",
+		left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+    }
+}
+
+"#numberOfJoinRequests":{
+	
+	left: "20dp"
+}
+
+
+
+"#groupImage":{
+	
+	width: "60dp",
+	height: "60dp",
+	backgroundColor: "grey",
+	left: "5dp"
+	
+}
+
+
+"#innerMiddleContainer":{
+	
+	height: Ti.UI.FILL,
+	width: Ti.UI.SIZE,
+	layout: "vertical",
+	left: "20dp",
+}
+
+"#events":{
+	
+	left: "5dp",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+
+}
+
+"#notices":{
+	
+	left: "10dp",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+

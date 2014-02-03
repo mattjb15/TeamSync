@@ -5,9 +5,9 @@
 			<Label id="appTitle">TeamSync</Label>
 		</View>	
 		
-		<Label id="pageTitle" top="10">Add Event</Label>
-		<TextField id="eventName"  top="25"  width="75%" height="30" hintText="Event Name"/>
-		<TextField  id="eventDescription" top="10"  width="75%" height="30" hintText="Event Description"/>	
+		<Label id="pageTitle" top="10">Add Notice</Label>
+		<TextField id="noticeName"  top="25"  width="75%" height="30" hintText="Notice Name"/>
+		<TextField  id="noticDescription" top="10"  width="75%" height="30" hintText="Notice Description"/>	
 		 <Picker id="picker" top="10" selectionIndicator="true" useSpinner="true" width="75%" height="120">
             <PickerColumn id="column1">
                 <PickerRow title="role 1"/>
@@ -16,7 +16,6 @@
                 <PickerRow title="role 4"/>
             </PickerColumn>
         </Picker>
-		<Button top="10" width="75%">Add Event</Button>
-		
+		<Button top="10" width="75%">Add Notice</Button>
 	</Window>
 </Alloy>
