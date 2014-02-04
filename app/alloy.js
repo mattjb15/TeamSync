@@ -12,6 +12,12 @@
 
 Alloy.Globals.loadIndex = function(e)
 {
-	var win = Alloy.createController("index").getView();
+	var win = Alloy.createController("homepage").getView();
 	win.open();
+};
+
+Alloy.Globals.closeHomepage = function(e)
+{
+	var win = Alloy.createController("homepage").getView();
+	win.close();
 };

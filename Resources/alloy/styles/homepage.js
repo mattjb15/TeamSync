@@ -53,7 +53,7 @@ module.exports = [ {
         width: "50dp",
         height: "50dp",
         right: "0",
-        backgroundImage: "/placeholder.png"
+        backgroundImage: "/man-silhouette.png"
     }
 }, {
     isId: true,

@@ -39,6 +39,7 @@ function setdata()
 	for (var i = 0; i < Alloy.Globals.getGroupResults.length; i++) 
 	{
     	data[i] = Alloy.createController('homepageRow',{
+    									groupId: Alloy.Globals.getGroupResults[i].groupId,
                                         groupName: Alloy.Globals.getGroupResults[i].groupName,
                                         groupDescription: Alloy.Globals.getGroupResults[i].groupDescription
                                 		}).getView();   // is this a hack? $model is the internal reference to the current model

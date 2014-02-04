@@ -1,14 +1,14 @@
 <Alloy>
 	<Window class="container" layout="vertical">
 		<View id="header">
-			<View id="appIcon"></View>
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
 			<Label id="appTitle">TeamSync</Label>
 		</View>	
 		
 		<Label id="pageTitle" top="10">Add Event</Label>
-		<TextField id="eventName"  top="25"  width="75%" height="30" hintText="Event Name"/>
-		<TextField  id="eventDescription" top="10"  width="75%" height="30" hintText="Event Description"/>	
-		 <Picker id="picker" top="10" selectionIndicator="true" useSpinner="true" width="75%" height="120">
+		<TextField id="eventName"  top="25"  width="75%" height="60" hintText="Event Name"/>
+		<TextField  id="eventDescription" top="10"  width="75%" height="60" hintText="Event Description"/>	
+		 <Picker id="picker" top="10" selectionIndicator="true" useSpinner="true" width="75%" height="180">
             <PickerColumn id="column1">
                 <PickerRow title="role 1"/>
                 <PickerRow title="role 2"/>

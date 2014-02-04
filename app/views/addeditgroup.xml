@@ -6,8 +6,8 @@
 		</View>	
 		
 		<Label id="pageTitle" top="10">Add/Edit Group</Label>
-		<TextField id="GroupName"  top="25"  width="75%" height="30" hintText="Group Name"/>
-		<TextField  id="GroupDescription" top="10"  width="75%" height="30" hintText="Group Description"/>
+		<TextField id="GroupName"  top="25"  width="75%" height="60" hintText="Group Name"/>
+		<TextField  id="GroupDescription" top="10"  width="75%" height="60" hintText="Group Description"/>
 		<Button top="10" width="75%" onClick="addGroup">Add Group</Button>
 	</Window>
 </Alloy>

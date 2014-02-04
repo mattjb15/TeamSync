@@ -1,17 +1,16 @@
+
 <Alloy>
-	<Window class="container" layout="vertical">
+	<Window class="container" layout="vertical" id="noticesWin">
 		<View id="header">
-			<View id="appIcon"></View>
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
 			<Label id="groupName">Notices for group name </Label>
 			<View id="groupImage"></View>
 		</View>	
-			<TableView id="mainList">
-				<TableViewRow>
-					<View class="rowContainer" layout="vertical" height="Ti.UI.SIZE">	
-						<Label id="noticeName">notice name </Label>
-						<Label id="noticeDescription">The notice text goes here!!!! </Label>
-					</View>>	
-				</TableViewRow>		
+		
+		<Button top="10" width="75%" onClick="loadAddNotice">Add New Notice</Button>
+		
+			<TableView top="10" id="noticeList">
+
 			</TableView>
 	</Window>
 </Alloy>

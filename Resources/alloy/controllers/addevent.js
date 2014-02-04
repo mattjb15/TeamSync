@@ -6,6 +6,7 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
+    var __defers = {};
     $.__views.addevent = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
@@ -28,6 +29,11 @@ function Controller() {
         id: "appIcon"
     });
     $.__views.header.add($.__views.appIcon);
+    try {
+        $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
+    } catch (e) {
+        __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] = true;
+    }
     $.__views.appTitle = Ti.UI.createLabel({
         font: {
             fontSize: "20dp",
@@ -48,7 +54,7 @@ function Controller() {
         id: "eventName",
         top: "25",
         width: "75%",
-        height: "30",
+        height: "60",
         hintText: "Event Name"
     });
     $.__views.addevent.add($.__views.eventName);
@@ -56,7 +62,7 @@ function Controller() {
         id: "eventDescription",
         top: "10",
         width: "75%",
-        height: "30",
+        height: "60",
         hintText: "Event Description"
     });
     $.__views.addevent.add($.__views.eventDescription);
@@ -66,7 +72,7 @@ function Controller() {
         selectionIndicator: "true",
         useSpinner: "true",
         width: "75%",
-        height: "120"
+        height: "180"
     });
     $.__views.addevent.add($.__views.picker);
     $.__views.column1 = Ti.UI.createPickerColumn({
@@ -102,6 +108,7 @@ function Controller() {
     $.__views.addevent.add($.__views.__alloyId6);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
     _.extend($, exports);
 }
 

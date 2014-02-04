@@ -8,7 +8,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0022,
+    priority: 10000.0041,
     key: "container",
     style: {
         backgroundColor: "red"

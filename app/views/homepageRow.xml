@@ -18,7 +18,9 @@
 				</View>
 				<View id="bottomRowContainer">
 					<Label id="events" onClick="loadGroupEvents">Events</Label>
+					<View id= "eventsImage"></View>
 					<Label id="notices" onClick="loadGroupNotices">Notices</Label>
+					<View id= "noticesImage"></View>
 				</View>
 			</View>						
 	</TableViewRow>			

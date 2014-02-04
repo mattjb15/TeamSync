@@ -77,6 +77,6 @@ module.exports = [ {
         width: "50dp",
         height: "50dp",
         right: "0",
-        backgroundImage: "/placeholder.png"
+        backgroundImage: "/groupImage.png"
     }
 } ];

@@ -1,0 +1,16 @@
+<Alloy>
+	<TableViewRow height="Ti.UI.SIZE">
+			<View class="verticalRowContainer">
+				<View id="topRowContainer">
+					<Label id="noticeName">Notice Subject </Label>
+				</View>
+				<View id="middleRowContainer">
+					<Label id="noticeDescription">The notice body goes here!!! </Label>
+				</View>
+				
+				<View id="bottomRowContainer">
+					<Label id="noticeDate">Posted by (username)</Label>
+				</View>
+			</View>						
+	</TableViewRow>			
+</Alloy>

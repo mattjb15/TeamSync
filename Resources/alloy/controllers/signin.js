@@ -67,8 +67,8 @@ function Controller() {
     $.__views.signinWin.add($.__views.pageTitle);
     $.__views.username = Ti.UI.createTextField({
         id: "username",
-        top: "100",
-        width: "250",
+        top: "25",
+        width: "75%",
         height: "60",
         hintText: "Username"
     });
@@ -77,25 +77,27 @@ function Controller() {
         id: "password",
         passwordMask: "true",
         top: "10",
-        width: "250",
+        width: "75%",
         height: "60",
         hintText: "Password"
     });
     $.__views.signinWin.add($.__views.password);
-    $.__views.__alloyId41 = Ti.UI.createButton({
+    $.__views.__alloyId31 = Ti.UI.createButton({
         title: "Sign In",
         top: "10",
-        id: "__alloyId41"
+        width: "75%",
+        id: "__alloyId31"
     });
-    $.__views.signinWin.add($.__views.__alloyId41);
-    login ? $.__views.__alloyId41.addEventListener("click", login) : __defers["$.__views.__alloyId41!click!login"] = true;
-    $.__views.__alloyId42 = Ti.UI.createButton({
+    $.__views.signinWin.add($.__views.__alloyId31);
+    login ? $.__views.__alloyId31.addEventListener("click", login) : __defers["$.__views.__alloyId31!click!login"] = true;
+    $.__views.__alloyId32 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
-        id: "__alloyId42"
+        width: "75%",
+        id: "__alloyId32"
     });
-    $.__views.signinWin.add($.__views.__alloyId42);
-    loadSignup ? $.__views.__alloyId42.addEventListener("click", loadSignup) : __defers["$.__views.__alloyId42!click!loadSignup"] = true;
+    $.__views.signinWin.add($.__views.__alloyId32);
+    loadSignup ? $.__views.__alloyId32.addEventListener("click", loadSignup) : __defers["$.__views.__alloyId32!click!loadSignup"] = true;
     $.__views.resetPassword = Ti.UI.createLabel({
         text: "Reset password...",
         id: "resetPassword",
@@ -117,8 +119,8 @@ function Controller() {
         } else alert(response.message);
     };
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
-    __defers["$.__views.__alloyId41!click!login"] && $.__views.__alloyId41.addEventListener("click", login);
-    __defers["$.__views.__alloyId42!click!loadSignup"] && $.__views.__alloyId42.addEventListener("click", loadSignup);
+    __defers["$.__views.__alloyId31!click!login"] && $.__views.__alloyId31.addEventListener("click", login);
+    __defers["$.__views.__alloyId32!click!loadSignup"] && $.__views.__alloyId32.addEventListener("click", loadSignup);
     _.extend($, exports);
 }
 

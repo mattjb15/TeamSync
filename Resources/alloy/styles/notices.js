@@ -8,7 +8,7 @@ module.exports = [ {
     }
 }, {
     isClass: true,
-    priority: 10000.0025,
+    priority: 10000.0044,
     key: "Label",
     style: {
         width: "100dp",
@@ -47,17 +47,17 @@ module.exports = [ {
     }
 }, {
     isId: true,
-    priority: 100000.0024,
+    priority: 100000.0043,
     key: "groupImage",
     style: {
         width: "50dp",
         height: "50dp",
         right: "0",
-        backgroundImage: "/placeholder.png"
+        backgroundImage: "/groupImage.png"
     }
 }, {
     isId: true,
-    priority: 100000.0026,
+    priority: 100000.0045,
     key: "noticeName",
     style: {
         font: {

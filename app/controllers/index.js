@@ -1,3 +1,5 @@
+
+
 function loadLogin(e)
 {
 	var win =Alloy.createController("signin").getView();
@@ -40,6 +42,12 @@ function loadAddNotice(e)
 	
 }
 
-
+function loadNotices(e)
+{
+	var win =Alloy.createController("notices").getView();
+	win.open();
+	
+}
 
 $.index.open();
+loadLogin();

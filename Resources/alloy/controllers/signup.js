@@ -72,32 +72,32 @@ function Controller() {
     $.__views.emailAddress = Ti.UI.createTextField({
         id: "emailAddress",
         top: "10",
-        width: "250",
-        height: "30",
+        width: "75%",
+        height: "60",
         hintText: "Email Address"
     });
     $.__views.signupWin.add($.__views.emailAddress);
     $.__views.username = Ti.UI.createTextField({
         id: "username",
         top: "10",
-        width: "250",
-        height: "30",
+        width: "75%",
+        height: "60",
         hintText: "Username"
     });
     $.__views.signupWin.add($.__views.username);
     $.__views.firstName = Ti.UI.createTextField({
         id: "firstName",
         top: "10",
-        width: "250",
-        height: "30",
+        width: "75%",
+        height: "60",
         hintText: "First Name"
     });
     $.__views.signupWin.add($.__views.firstName);
     $.__views.lastName = Ti.UI.createTextField({
         id: "lastName",
         top: "10",
-        width: "250",
-        height: "30",
+        width: "75%",
+        height: "60",
         hintText: "Last Name"
     });
     $.__views.signupWin.add($.__views.lastName);
@@ -105,8 +105,8 @@ function Controller() {
         id: "password",
         passwordMask: "true",
         top: "10",
-        width: "250",
-        height: "30",
+        width: "75%",
+        height: "60",
         hintText: "Password"
     });
     $.__views.signupWin.add($.__views.password);
@@ -114,18 +114,19 @@ function Controller() {
         id: "confirmPassword",
         passwordMask: "true",
         top: "10",
-        width: "250",
-        height: "30",
+        width: "75%",
+        height: "60",
         hintText: "Confirm Password"
     });
     $.__views.signupWin.add($.__views.confirmPassword);
-    $.__views.__alloyId43 = Ti.UI.createButton({
+    $.__views.__alloyId33 = Ti.UI.createButton({
         title: "Sign Up",
         top: "10",
-        id: "__alloyId43"
+        width: "75%",
+        id: "__alloyId33"
     });
-    $.__views.signupWin.add($.__views.__alloyId43);
-    clickSignup ? $.__views.__alloyId43.addEventListener("click", clickSignup) : __defers["$.__views.__alloyId43!click!clickSignup"] = true;
+    $.__views.signupWin.add($.__views.__alloyId33);
+    clickSignup ? $.__views.__alloyId33.addEventListener("click", clickSignup) : __defers["$.__views.__alloyId33!click!clickSignup"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     var createReq = Titanium.Network.createHTTPClient();
@@ -146,7 +147,7 @@ function Controller() {
     };
     var testresults;
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
-    __defers["$.__views.__alloyId43!click!clickSignup"] && $.__views.__alloyId43.addEventListener("click", clickSignup);
+    __defers["$.__views.__alloyId33!click!clickSignup"] && $.__views.__alloyId33.addEventListener("click", clickSignup);
     _.extend($, exports);
 }
 
