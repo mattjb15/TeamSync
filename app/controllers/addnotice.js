@@ -1,3 +1,10 @@
+
+//only accounts for one available role atm.
+var row = Ti.UI.createPickerRow();
+row.title = Alloy.Globals.role_name;
+$.column1.addRow(row);
+
+
 function addNotice(e)
 {
     if ($.noticeName.value == '')  
@@ -8,13 +15,18 @@ function addNotice(e)
     if ($.noticeName.value && $.noticeDescription.value != '')  
     {  
         var date = new Date();
+        var stringDate = date.toString();
+        var cleansedDate = stringDate.split("GMT");
+        
+        
         
         addNoticeReq.open("POST","http://sheffieldbears.com/teamsync/addNotice.php");  
         var params = {  
-            roleId: "2", //hack - use 1 as constant until fixed
+            roleName: $.picker.getSelectedRow(0).title,
             noticeName: $.noticeName.value,  
             noticeDescription: $.noticeDescription.value,
-            noticeDate: date //add Date
+            noticeDate: cleansedDate[0], //add Date
+            groupId: Alloy.Globals.group_id
         };  
         addNoticeReq.send(params); 
     }  
@@ -29,26 +41,26 @@ addNoticeReq.onload = function()
 {    
     if (this.responseText)  
     {  
-        var alertDialog = Titanium.UI.createAlertDialog({  
-            title: 'Alert',  
-            message: this.responseText,  
-            buttonNames: ['OK']  
+        alert(this.responseText);
+        $.addNoticeWin.close();
+		var win =Alloy.createController("homepage").getView();
+		win.open();
+        /*
+       	var testDialog = Titanium.UI.createAlertDialog({  
+            title: 'Alerttest',  
+            message: this.responseText,
+            buttonNames: ['test'],
+            cancel: 0 
         });
-        alertDialog.addEventListener('click',function(e)  
+        testDialog.addEventListener('click',function(e)  
 		{  
-			onSuccess();
+			testDialog.hide();
 		});
-        alertDialog.show();
+        testDialog.show();
+        */
     }
     else  
     {  
         alert(this.responseText);  
     }  
 }; 
-
-function onSuccess(e)
-{
-	$.addGroupWin.close();
-	var win =Alloy.createController("homepage").getView();
-	win.open();
-}

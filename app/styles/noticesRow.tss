@@ -1,0 +1,78 @@
+
+"#noticeName":{
+	
+	width: "100dp",
+	height: "50dp",
+	//left: "1%",
+		//left: "10dp",
+   font: {
+    fontSize: "16dp",
+    fontWeight: "bold"
+}
+	
+	
+}
+
+".verticalRowContainer":{
+	
+	layout: "vertical",	
+	height: Ti.UI.SIZE
+	
+}
+
+"#topRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#middleRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+"#bottomRowContainer":{
+	
+	layout: "horizontal",
+	width: Ti.UI.FILL,
+	height: "60dp",
+
+}
+
+
+"#noticeDescription":{
+	
+	left: "5",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+}
+
+"#noticeDate":{
+	
+	left: "5dp",
+	   font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

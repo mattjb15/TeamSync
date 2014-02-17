@@ -58,15 +58,15 @@ function Controller() {
         id: "avatar"
     });
     $.__views.header.add($.__views.avatar);
-    var __alloyId22 = [];
-    $.__views.__alloyId23 = Ti.UI.createTableViewRow({
-        id: "__alloyId23"
+    var __alloyId11 = [];
+    $.__views.__alloyId12 = Ti.UI.createTableViewRow({
+        id: "__alloyId12"
     });
-    __alloyId22.push($.__views.__alloyId23);
-    $.__views.__alloyId24 = Ti.UI.createView({
-        id: "__alloyId24"
+    __alloyId11.push($.__views.__alloyId12);
+    $.__views.__alloyId13 = Ti.UI.createView({
+        id: "__alloyId13"
     });
-    $.__views.__alloyId23.add($.__views.__alloyId24);
+    $.__views.__alloyId12.add($.__views.__alloyId13);
     $.__views.searchIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -74,13 +74,13 @@ function Controller() {
         backgroundImage: "/Search-icon.png",
         id: "searchIcon"
     });
-    $.__views.__alloyId24.add($.__views.searchIcon);
+    $.__views.__alloyId13.add($.__views.searchIcon);
     $.__views.searchLabel = Ti.UI.createLabel({
         left: "10%",
         text: "Search",
         id: "searchLabel"
     });
-    $.__views.__alloyId24.add($.__views.searchLabel);
+    $.__views.__alloyId13.add($.__views.searchLabel);
     $.__views.invitesIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -88,13 +88,13 @@ function Controller() {
         backgroundImage: "/Email-3-icon.png",
         id: "invitesIcon"
     });
-    $.__views.__alloyId24.add($.__views.invitesIcon);
+    $.__views.__alloyId13.add($.__views.invitesIcon);
     $.__views.invitesLabel = Ti.UI.createLabel({
         left: "40%",
         text: "Invites",
         id: "invitesLabel"
     });
-    $.__views.__alloyId24.add($.__views.invitesLabel);
+    $.__views.__alloyId13.add($.__views.invitesLabel);
     $.__views.addGroupIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -102,17 +102,17 @@ function Controller() {
         backgroundImage: "/Plus-icon.png",
         id: "addGroupIcon"
     });
-    $.__views.__alloyId24.add($.__views.addGroupIcon);
+    $.__views.__alloyId13.add($.__views.addGroupIcon);
     loadaddgroup ? $.__views.addGroupIcon.addEventListener("click", loadaddgroup) : __defers["$.__views.addGroupIcon!click!loadaddgroup"] = true;
     $.__views.addGroupLabel = Ti.UI.createLabel({
         left: "70%",
         text: "Add Group",
         id: "addGroupLabel"
     });
-    $.__views.__alloyId24.add($.__views.addGroupLabel);
+    $.__views.__alloyId13.add($.__views.addGroupLabel);
     loadaddgroup ? $.__views.addGroupLabel.addEventListener("click", loadaddgroup) : __defers["$.__views.addGroupLabel!click!loadaddgroup"] = true;
     $.__views.mainList = Ti.UI.createTableView({
-        data: __alloyId22,
+        data: __alloyId11,
         id: "mainList"
     });
     $.__views.homepageWin.add($.__views.mainList);
