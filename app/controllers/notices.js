@@ -2,7 +2,7 @@ var getNoticesReq = Titanium.Network.createHTTPClient();
 getNoticesReq.onload = function()  
 {    
     var json = this.responseText;  
-    var response = JSON.parse(json);  
+    var response = JSON.parse(json);
     if (response != "no notices")  
     {  
 		Alloy.Globals.getNoticeResults=response;
@@ -32,6 +32,9 @@ getNoticesReq.send(params);
 
 function setdata()
 {
+	Alloy.Globals.role_id = Alloy.Globals.getNoticeResults[0].roleId;
+	Alloy.Globals.role_name = Alloy.Globals.getNoticeResults[0].roleName;
+	
 	var data = [];
 	for (var i = 0; i < Alloy.Globals.getNoticeResults.length; i++) 
 	{
@@ -39,7 +42,7 @@ function setdata()
                                         noticeName: Alloy.Globals.getNoticeResults[i].noticeSubject,
                                         noticeDescription: Alloy.Globals.getNoticeResults[i].noticeBody,
                                         noticeDate: Alloy.Globals.getNoticeResults[i].noticeDate
-                                		}).getView();   // is this a hack? $model is the internal reference to the current model
+                                		}).getView();
 		$.noticeList.appendRow(data[i]);
 	}
 	//$.mainList.setData(data);

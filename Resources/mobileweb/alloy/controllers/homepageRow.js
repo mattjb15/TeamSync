@@ -1,10 +1,12 @@
 function Controller() {
     function loadGroupEvents() {
+        Alloy.Globals.group_id = args.groupId;
         var win = Alloy.createController("events").getView();
         win.open();
         Alloy.Globals.closeHomepage();
     }
     function loadGroupNotices() {
+        Alloy.Globals.group_id = args.groupId;
         var win = Alloy.createController("notices").getView();
         win.open();
         Alloy.Globals.closeHomepage();
@@ -22,19 +24,19 @@ function Controller() {
         id: "homepageRow"
     });
     $.__views.homepageRow && $.addTopLevelView($.__views.homepageRow);
-    $.__views.__alloyId25 = Ti.UI.createView({
+    $.__views.__alloyId14 = Ti.UI.createView({
         layout: "vertical",
         height: Ti.UI.SIZE,
-        id: "__alloyId25"
+        id: "__alloyId14"
     });
-    $.__views.homepageRow.add($.__views.__alloyId25);
+    $.__views.homepageRow.add($.__views.__alloyId14);
     $.__views.topRowContainer = Ti.UI.createView({
         layout: "horizontal",
         width: Ti.UI.FILL,
         height: "60dp",
         id: "topRowContainer"
     });
-    $.__views.__alloyId25.add($.__views.topRowContainer);
+    $.__views.__alloyId14.add($.__views.topRowContainer);
     $.__views.groupSettings = Ti.UI.createLabel({
         left: "1%",
         font: {
@@ -75,7 +77,7 @@ function Controller() {
         height: "60dp",
         id: "middleRowContainer"
     });
-    $.__views.__alloyId25.add($.__views.middleRowContainer);
+    $.__views.__alloyId14.add($.__views.middleRowContainer);
     $.__views.groupImage = Ti.UI.createView({
         width: "60dp",
         height: "60dp",
@@ -113,7 +115,7 @@ function Controller() {
         height: "60dp",
         id: "bottomRowContainer"
     });
-    $.__views.__alloyId25.add($.__views.bottomRowContainer);
+    $.__views.__alloyId14.add($.__views.bottomRowContainer);
     $.__views.events = Ti.UI.createLabel({
         left: "5dp",
         font: {
@@ -157,7 +159,6 @@ function Controller() {
     var args = arguments[0] || {};
     $.GroupNameLabel.text = args.groupName;
     $.GroupDescriptionLabel.text = args.groupDescription;
-    Alloy.Globals.group_id = args.groupId;
     __defers["$.__views.events!click!loadGroupEvents"] && $.__views.events.addEventListener("click", loadGroupEvents);
     __defers["$.__views.notices!click!loadGroupNotices"] && $.__views.notices.addEventListener("click", loadGroupNotices);
     _.extend($, exports);

@@ -8,15 +8,8 @@
 		</View>	
 				<Button top="10" width="75%" onClick="loadAddEvent">Add New Event</Button>
 		
-			<TableView top="10" class="mainList">
-				<TableViewRow height="Ti.UI.SIZE" layout="vertical">
-							<Label class="eventName">Event Name </Label>
-							<Label class="eventDescription">Event description Event description Event description </Label>
-							<View  height="Ti.UI.SIZE" layout="horizontal">
-								<Label class="eventDateLabel">Date: </Label>
-								<Label class="eventDate">12/12/2013 </Label>
-							</View>
-				</TableViewRow>		
+			<TableView top="10" id="eventList">
+
 			</TableView>
 	</Window>
 </Alloy>
