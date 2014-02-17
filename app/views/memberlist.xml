@@ -1,0 +1,14 @@
+<Alloy>
+	<Window class="container" layout="vertical" id="signupWin">
+		<View id="header">
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
+			<Label id="appTitle">TeamSync</Label>
+		</View>	
+		
+		<Label id="groupname" top="10">James' Friends</Label>
+		<Label id="pageTitle" top="10">Member List</Label>
+		
+		<Button top="10">Invite Member</Button>
+		<TableView id="myTable"></TableView>	
+	</Window>
+</Alloy>

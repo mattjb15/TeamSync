@@ -49,5 +49,26 @@ function loadNotices(e)
 	
 }
 
+function loadUserOptions(e)
+{
+	var win =Alloy.createController("useroptions").getView();
+	win.open();
+	
+}
+
+function loadGroupSettings(e)
+{
+	var win =Alloy.createController("groupsettings").getView();
+	win.open();
+	
+}
+
+function loadMemberList(e)
+{
+	var win =Alloy.createController("memberlist").getView();
+	win.open();
+	
+}
+
 $.index.open();
 loadLogin();
