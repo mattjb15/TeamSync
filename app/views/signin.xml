@@ -7,7 +7,7 @@
 		
 		<Label id="pageTitle" top="10">Sign In</Label>
 		<TextField id="username"  top="25"  width="75%" height="60" hintText="Username"/>
-		<TextField  id="password"  passwordMask="true" top="10"  width="75%" height="60" hintText="Password"/>
+		<TextField id="password"  passwordMask="true" top="10"  width="75%" height="60" hintText="Password"/>
 		<Button top="10" width="75%" onClick="login">Sign In</Button>
 		<Button top="10" width="75%" onClick="loadSignup">Sign Up</Button>
 		<Label id="resetPassword" top="10">Reset password...</Label>

@@ -1,0 +1,11 @@
+".username":{
+	font:{
+		color: "black"
+	}
+}
+
+".password":{
+	font:{
+		color: "black"
+	}
+}

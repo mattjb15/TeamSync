@@ -1,0 +1,34 @@
+".username":{
+	font:{
+		color: "black"
+	}
+}
+
+".password":{
+	font:{
+		color: "black"
+	}
+}
+
+".firstName":{
+	font:{
+		color: "black"
+	}
+}
+
+".confirmPassword":{
+	font:{
+		color: "black"
+	}
+}
+".lastName":{
+	font:{
+		color: "black"
+	}
+}
+
+".emailAddress":{
+	font:{
+		color: "black"
+	}
+}
