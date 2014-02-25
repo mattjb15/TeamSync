@@ -63,19 +63,19 @@ function Controller() {
     });
     $.__views.addGroupWin.add($.__views.pageTitle);
     $.__views.GroupName = Ti.UI.createTextField({
-        id: "GroupName",
         top: "25",
         width: "75%",
         height: "60",
-        hintText: "Group Name"
+        hintText: "Group Name",
+        id: "GroupName"
     });
     $.__views.addGroupWin.add($.__views.GroupName);
     $.__views.GroupDescription = Ti.UI.createTextField({
-        id: "GroupDescription",
         top: "10",
         width: "75%",
         height: "60",
-        hintText: "Group Description"
+        hintText: "Group Description",
+        id: "GroupDescription"
     });
     $.__views.addGroupWin.add($.__views.GroupDescription);
     $.__views.__alloyId0 = Ti.UI.createButton({

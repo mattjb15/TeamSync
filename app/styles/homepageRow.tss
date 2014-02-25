@@ -3,8 +3,8 @@
 	
 	width: "100dp",
 	height: "50dp",
-	left: "1%",
-		//left: "10dp",
+	//left: "1%",
+	left: "10dp",
    font: {
     fontSize: "16dp",
     fontWeight: "bold"
@@ -78,8 +78,8 @@
 
 "#groupSettings":{
 	
-	left: "1%",
-	//left: "10dp",
+	//left: "1%",
+	left: "10dp",
    font: {
     fontSize: "16dp",
     fontWeight: "bold"

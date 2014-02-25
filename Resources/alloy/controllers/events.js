@@ -1,4 +1,17 @@
 function Controller() {
+    function setdata() {
+        Alloy.Globals.role_id = Alloy.Globals.getEventResults[0].roleId;
+        Alloy.Globals.role_name = Alloy.Globals.getEventResults[0].roleName;
+        var data = [];
+        for (var i = 0; Alloy.Globals.getEventResults.length > i; i++) {
+            data[i] = Alloy.createController("eventsRow", {
+                eventName: Alloy.Globals.getEventResults[i].eventSubject,
+                eventDescription: Alloy.Globals.getEventResults[i].eventBody,
+                eventDate: Alloy.Globals.getEventResults[i].eventDate
+            }).getView();
+            $.eventList.appendRow(data[i]);
+        }
+    }
     function loadAddEvent() {
         var win = Alloy.createController("addevent").getView();
         win.open();
@@ -52,65 +65,51 @@ function Controller() {
         id: "groupImage"
     });
     $.__views.header.add($.__views.groupImage);
-    $.__views.__alloyId13 = Ti.UI.createButton({
+    $.__views.__alloyId5 = Ti.UI.createButton({
         title: "Add New Event",
         top: "10",
         width: "75%",
-        id: "__alloyId13"
+        id: "__alloyId5"
     });
-    $.__views.eventsWin.add($.__views.__alloyId13);
-    loadAddEvent ? $.__views.__alloyId13.addEventListener("click", loadAddEvent) : __defers["$.__views.__alloyId13!click!loadAddEvent"] = true;
-    $.__views.__alloyId15 = Ti.UI.createTableViewRow({
-        height: Ti.UI.SIZE,
-        layout: "vertical",
-        id: "__alloyId15"
-    });
-    var __alloyId16 = [];
-    __alloyId16.push($.__views.__alloyId15);
-    $.__views.__alloyId17 = Ti.UI.createLabel({
-        left: "5dp",
-        font: {
-            fontSize: "16dp",
-            fontWeight: "bold"
-        },
-        text: "Event Name",
-        id: "__alloyId17"
-    });
-    $.__views.__alloyId15.add($.__views.__alloyId17);
-    $.__views.__alloyId18 = Ti.UI.createLabel({
-        left: "5dp",
-        text: "Event description Event description Event description",
-        id: "__alloyId18"
-    });
-    $.__views.__alloyId15.add($.__views.__alloyId18);
-    $.__views.__alloyId19 = Ti.UI.createView({
-        height: Ti.UI.SIZE,
-        layout: "horizontal",
-        id: "__alloyId19"
-    });
-    $.__views.__alloyId15.add($.__views.__alloyId19);
-    $.__views.__alloyId20 = Ti.UI.createLabel({
-        left: "5dp",
-        text: "Date:",
-        id: "__alloyId20"
-    });
-    $.__views.__alloyId19.add($.__views.__alloyId20);
-    $.__views.__alloyId21 = Ti.UI.createLabel({
-        left: "5dp",
-        text: "12/12/2013",
-        id: "__alloyId21"
-    });
-    $.__views.__alloyId19.add($.__views.__alloyId21);
-    $.__views.__alloyId14 = Ti.UI.createTableView({
-        data: __alloyId16,
+    $.__views.eventsWin.add($.__views.__alloyId5);
+    loadAddEvent ? $.__views.__alloyId5.addEventListener("click", loadAddEvent) : __defers["$.__views.__alloyId5!click!loadAddEvent"] = true;
+    $.__views.eventList = Ti.UI.createTableView({
         top: "10",
-        id: "__alloyId14"
+        id: "eventList"
     });
-    $.__views.eventsWin.add($.__views.__alloyId14);
+    $.__views.eventsWin.add($.__views.eventList);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var getEventsReq = Titanium.Network.createHTTPClient();
+    getEventsReq.onload = function() {
+        var json = this.responseText;
+        var response = JSON.parse(json);
+        if ("no events" != response) {
+            Alloy.Globals.getEventResults = response;
+            setdata();
+        } else {
+            var row = Titanium.UI.createTableViewRow();
+            var view = Titanium.UI.createView({
+                backgroundColor: "red",
+                height: 50
+            });
+            row.height = "auto";
+            var label = Ti.UI.createLabel({
+                text: "There are no events."
+            });
+            view.add(label);
+            row.add(view);
+            $.eventList.appendRow(row);
+        }
+    };
+    getEventsReq.open("POST", "http://sheffieldbears.com/teamsync/getEvents.php");
+    var params = {
+        userId: Alloy.Globals.user_id,
+        groupId: Alloy.Globals.group_id
+    };
+    getEventsReq.send(params);
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
-    __defers["$.__views.__alloyId13!click!loadAddEvent"] && $.__views.__alloyId13.addEventListener("click", loadAddEvent);
+    __defers["$.__views.__alloyId5!click!loadAddEvent"] && $.__views.__alloyId5.addEventListener("click", loadAddEvent);
     _.extend($, exports);
 }
 

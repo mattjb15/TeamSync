@@ -71,4 +71,4 @@ function loadMemberList(e)
 }
 
 $.index.open();
-loadLogin();
+//loadLogin();

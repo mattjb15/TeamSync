@@ -1,4 +1,18 @@
 function Controller() {
+    function addEvent() {
+        "" == $.eventName.value && ($.eventName.value = "Untitled Event");
+        if ($.eventName.value && "" != $.eventDescription.value) {
+            addEventReq.open("POST", "http://sheffieldbears.com/teamsync/addEvent.php");
+            var params = {
+                roleName: $.picker.getSelectedRow(0).title,
+                eventName: $.eventName.value,
+                eventDescription: $.eventDescription.value,
+                eventDate: $.eventDate.value,
+                groupId: Alloy.Globals.group_id
+            };
+            addEventReq.send(params);
+        } else alert("Event Incomplete!");
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "addevent";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -7,12 +21,12 @@ function Controller() {
     var $ = this;
     var exports = {};
     var __defers = {};
-    $.__views.addevent = Ti.UI.createWindow({
+    $.__views.addEventWin = Ti.UI.createWindow({
         backgroundColor: "white",
         layout: "vertical",
-        id: "addevent"
+        id: "addEventWin"
     });
-    $.__views.addevent && $.addTopLevelView($.__views.addevent);
+    $.__views.addEventWin && $.addTopLevelView($.__views.addEventWin);
     $.__views.header = Ti.UI.createView({
         height: "50dp",
         backgroundColor: "white",
@@ -20,7 +34,7 @@ function Controller() {
         borderColor: "black",
         id: "header"
     });
-    $.__views.addevent.add($.__views.header);
+    $.__views.addEventWin.add($.__views.header);
     $.__views.appIcon = Ti.UI.createView({
         width: "50dp",
         height: "50dp",
@@ -49,7 +63,7 @@ function Controller() {
         id: "pageTitle",
         top: "10"
     });
-    $.__views.addevent.add($.__views.pageTitle);
+    $.__views.addEventWin.add($.__views.pageTitle);
     $.__views.eventName = Ti.UI.createTextField({
         id: "eventName",
         top: "25",
@@ -57,7 +71,7 @@ function Controller() {
         height: "60",
         hintText: "Event Name"
     });
-    $.__views.addevent.add($.__views.eventName);
+    $.__views.addEventWin.add($.__views.eventName);
     $.__views.eventDescription = Ti.UI.createTextField({
         id: "eventDescription",
         top: "10",
@@ -65,7 +79,15 @@ function Controller() {
         height: "60",
         hintText: "Event Description"
     });
-    $.__views.addevent.add($.__views.eventDescription);
+    $.__views.addEventWin.add($.__views.eventDescription);
+    $.__views.eventDate = Ti.UI.createTextField({
+        id: "eventDate",
+        top: "10",
+        width: "75%",
+        height: "60",
+        hintText: "Event Date"
+    });
+    $.__views.addEventWin.add($.__views.eventDate);
     $.__views.picker = Ti.UI.createPicker({
         id: "picker",
         top: "10",
@@ -74,41 +96,35 @@ function Controller() {
         width: "75%",
         height: "180"
     });
-    $.__views.addevent.add($.__views.picker);
+    $.__views.addEventWin.add($.__views.picker);
     $.__views.column1 = Ti.UI.createPickerColumn({
         id: "column1"
     });
     $.__views.picker.add($.__views.column1);
-    $.__views.__alloyId2 = Ti.UI.createPickerRow({
-        title: "role 1",
-        id: "__alloyId2"
-    });
-    $.__views.column1.addRow($.__views.__alloyId2);
-    $.__views.__alloyId3 = Ti.UI.createPickerRow({
-        title: "role 2",
-        id: "__alloyId3"
-    });
-    $.__views.column1.addRow($.__views.__alloyId3);
-    $.__views.__alloyId4 = Ti.UI.createPickerRow({
-        title: "role 3",
-        id: "__alloyId4"
-    });
-    $.__views.column1.addRow($.__views.__alloyId4);
-    $.__views.__alloyId5 = Ti.UI.createPickerRow({
-        title: "role 4",
-        id: "__alloyId5"
-    });
-    $.__views.column1.addRow($.__views.__alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createButton({
+    $.__views.__alloyId2 = Ti.UI.createButton({
         title: "Add Event",
         top: "10",
         width: "75%",
-        id: "__alloyId6"
+        id: "__alloyId2"
     });
-    $.__views.addevent.add($.__views.__alloyId6);
+    $.__views.addEventWin.add($.__views.__alloyId2);
+    addEvent ? $.__views.__alloyId2.addEventListener("click", addEvent) : __defers["$.__views.__alloyId2!click!addEvent"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var row = Ti.UI.createPickerRow();
+    row.title = Alloy.Globals.role_name;
+    $.column1.addRow(row);
+    var addEventReq = Titanium.Network.createHTTPClient();
+    addEventReq.onload = function() {
+        if (this.responseText) {
+            alert(this.responseText);
+            $.addEventWin.close();
+            var win = Alloy.createController("homepage").getView();
+            win.open();
+        } else alert(this.responseText);
+    };
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
+    __defers["$.__views.__alloyId2!click!addEvent"] && $.__views.__alloyId2.addEventListener("click", addEvent);
     _.extend($, exports);
 }
 

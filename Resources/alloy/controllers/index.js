@@ -93,7 +93,6 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
-    loadLogin();
     __defers["$.__views.signIn!click!loadLogin"] && $.__views.signIn.addEventListener("click", loadLogin);
     __defers["$.__views.homepage!click!loadHomepage"] && $.__views.homepage.addEventListener("click", loadHomepage);
     __defers["$.__views.addEditGroup!click!loadAddeditgroup"] && $.__views.addEditGroup.addEventListener("click", loadAddeditgroup);
