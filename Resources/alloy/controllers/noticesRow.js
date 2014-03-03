@@ -11,19 +11,19 @@ function Controller() {
         id: "noticesRow"
     });
     $.__views.noticesRow && $.addTopLevelView($.__views.noticesRow);
-    $.__views.__alloyId22 = Ti.UI.createView({
+    $.__views.__alloyId23 = Ti.UI.createView({
         layout: "vertical",
         height: Ti.UI.SIZE,
-        id: "__alloyId22"
+        id: "__alloyId23"
     });
-    $.__views.noticesRow.add($.__views.__alloyId22);
+    $.__views.noticesRow.add($.__views.__alloyId23);
     $.__views.topRowContainer = Ti.UI.createView({
         layout: "horizontal",
         width: Ti.UI.FILL,
         height: "60dp",
         id: "topRowContainer"
     });
-    $.__views.__alloyId22.add($.__views.topRowContainer);
+    $.__views.__alloyId23.add($.__views.topRowContainer);
     $.__views.noticeName = Ti.UI.createLabel({
         width: "100dp",
         height: "50dp",
@@ -41,7 +41,7 @@ function Controller() {
         height: "60dp",
         id: "middleRowContainer"
     });
-    $.__views.__alloyId22.add($.__views.middleRowContainer);
+    $.__views.__alloyId23.add($.__views.middleRowContainer);
     $.__views.noticeDescription = Ti.UI.createLabel({
         left: "5",
         font: {
@@ -58,7 +58,7 @@ function Controller() {
         height: "60dp",
         id: "bottomRowContainer"
     });
-    $.__views.__alloyId22.add($.__views.bottomRowContainer);
+    $.__views.__alloyId23.add($.__views.bottomRowContainer);
     $.__views.noticeDateLabel = Ti.UI.createLabel({
         text: "Posted on:",
         id: "noticeDateLabel"

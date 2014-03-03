@@ -1,4 +1,17 @@
 function Controller() {
+    function setdata() {
+        Alloy.Globals.role_id = Alloy.Globals.getNoticeResults[0].roleId;
+        Alloy.Globals.role_name = Alloy.Globals.getNoticeResults[0].roleName;
+        var data = [];
+        for (var i = 0; Alloy.Globals.getNoticeResults.length > i; i++) {
+            data[i] = Alloy.createController("noticesRow", {
+                noticeName: Alloy.Globals.getNoticeResults[i].noticeSubject,
+                noticeDescription: Alloy.Globals.getNoticeResults[i].noticeBody,
+                noticeDate: Alloy.Globals.getNoticeResults[i].noticeDate
+            }).getView();
+            $.noticeList.appendRow(data[i]);
+        }
+    }
     function loadAddNotice() {
         var win = Alloy.createController("addnotice").getView();
         win.open();
@@ -52,49 +65,51 @@ function Controller() {
         id: "groupImage"
     });
     $.__views.header.add($.__views.groupImage);
-    $.__views.__alloyId27 = Ti.UI.createButton({
+    $.__views.__alloyId22 = Ti.UI.createButton({
         title: "Add New Notice",
         top: "10",
         width: "75%",
-        id: "__alloyId27"
+        id: "__alloyId22"
     });
-    $.__views.noticesWin.add($.__views.__alloyId27);
-    loadAddNotice ? $.__views.__alloyId27.addEventListener("click", loadAddNotice) : __defers["$.__views.__alloyId27!click!loadAddNotice"] = true;
-    $.__views.__alloyId28 = Ti.UI.createTableViewRow({
-        id: "__alloyId28"
-    });
-    var __alloyId29 = [];
-    __alloyId29.push($.__views.__alloyId28);
-    $.__views.__alloyId30 = Ti.UI.createView({
-        layout: "vertical",
-        height: Ti.UI.SIZE,
-        id: "__alloyId30"
-    });
-    $.__views.__alloyId28.add($.__views.__alloyId30);
-    $.__views.noticeName = Ti.UI.createLabel({
-        font: {
-            fontSize: "16dp",
-            fontWeight: "bold"
-        },
-        text: "notice name",
-        id: "noticeName"
-    });
-    $.__views.__alloyId30.add($.__views.noticeName);
-    $.__views.noticeDescription = Ti.UI.createLabel({
-        text: "The notice text goes here!!!!",
-        id: "noticeDescription"
-    });
-    $.__views.__alloyId30.add($.__views.noticeDescription);
-    $.__views.mainList = Ti.UI.createTableView({
-        data: __alloyId29,
+    $.__views.noticesWin.add($.__views.__alloyId22);
+    loadAddNotice ? $.__views.__alloyId22.addEventListener("click", loadAddNotice) : __defers["$.__views.__alloyId22!click!loadAddNotice"] = true;
+    $.__views.noticeList = Ti.UI.createTableView({
         top: "10",
-        id: "mainList"
+        id: "noticeList"
     });
-    $.__views.noticesWin.add($.__views.mainList);
+    $.__views.noticesWin.add($.__views.noticeList);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    var getNoticesReq = Titanium.Network.createHTTPClient();
+    getNoticesReq.onload = function() {
+        var json = this.responseText;
+        var response = JSON.parse(json);
+        if ("no notices" != response) {
+            Alloy.Globals.getNoticeResults = response;
+            setdata();
+        } else {
+            var row = Titanium.UI.createTableViewRow();
+            var view = Titanium.UI.createView({
+                backgroundColor: "red",
+                height: 50
+            });
+            row.height = "auto";
+            var label = Ti.UI.createLabel({
+                text: "There are no notices."
+            });
+            view.add(label);
+            row.add(view);
+            $.noticeList.appendRow(row);
+        }
+    };
+    getNoticesReq.open("POST", "http://sheffieldbears.com/teamsync/getNotices.php");
+    var params = {
+        userId: Alloy.Globals.user_id,
+        groupId: Alloy.Globals.group_id
+    };
+    getNoticesReq.send(params);
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
-    __defers["$.__views.__alloyId27!click!loadAddNotice"] && $.__views.__alloyId27.addEventListener("click", loadAddNotice);
+    __defers["$.__views.__alloyId22!click!loadAddNotice"] && $.__views.__alloyId22.addEventListener("click", loadAddNotice);
     _.extend($, exports);
 }
 
