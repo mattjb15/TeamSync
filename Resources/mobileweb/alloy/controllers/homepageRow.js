@@ -24,19 +24,19 @@ function Controller() {
         id: "homepageRow"
     });
     $.__views.homepageRow && $.addTopLevelView($.__views.homepageRow);
-    $.__views.__alloyId14 = Ti.UI.createView({
+    $.__views.__alloyId19 = Ti.UI.createView({
         layout: "vertical",
         height: Ti.UI.SIZE,
-        id: "__alloyId14"
+        id: "__alloyId19"
     });
-    $.__views.homepageRow.add($.__views.__alloyId14);
+    $.__views.homepageRow.add($.__views.__alloyId19);
     $.__views.topRowContainer = Ti.UI.createView({
         layout: "horizontal",
         width: Ti.UI.FILL,
         height: "60dp",
         id: "topRowContainer"
     });
-    $.__views.__alloyId14.add($.__views.topRowContainer);
+    $.__views.__alloyId19.add($.__views.topRowContainer);
     $.__views.groupSettings = Ti.UI.createLabel({
         left: "1%",
         font: {
@@ -77,7 +77,7 @@ function Controller() {
         height: "60dp",
         id: "middleRowContainer"
     });
-    $.__views.__alloyId14.add($.__views.middleRowContainer);
+    $.__views.__alloyId19.add($.__views.middleRowContainer);
     $.__views.groupImage = Ti.UI.createView({
         width: "60dp",
         height: "60dp",
@@ -115,7 +115,7 @@ function Controller() {
         height: "60dp",
         id: "bottomRowContainer"
     });
-    $.__views.__alloyId14.add($.__views.bottomRowContainer);
+    $.__views.__alloyId19.add($.__views.bottomRowContainer);
     $.__views.events = Ti.UI.createLabel({
         left: "5dp",
         font: {

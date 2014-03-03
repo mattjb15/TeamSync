@@ -3,7 +3,7 @@
 		<View id="header">
 			<View id="appIcon"></View>
 			<Label id="welcomeMessage">Welcome username</Label>
-			<View id="avatar"></View>
+			<View id="avatar" onClick="loaduseroptions"></View>
 		</View>	
 			<TableView id="mainList">
 				<TableViewRow>

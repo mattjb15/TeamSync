@@ -27,3 +27,10 @@
 		color: "black"
 	}
 }
+
+"#avatar":{
+	width: "50dp",
+	height: "50dp",
+	right: "0",
+	backgroundImage: "/man-silhouette.png"
+}

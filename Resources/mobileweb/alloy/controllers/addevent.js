@@ -1,4 +1,18 @@
 function Controller() {
+    function addEvent() {
+        "" == $.eventName.value && ($.eventName.value = "Untitled Event");
+        if ($.eventName.value && "" != $.eventDescription.value) {
+            addEventReq.open("POST", "http://sheffieldbears.com/teamsync/addEvent.php");
+            var params = {
+                roleName: $.picker.getSelectedRow(0).title,
+                eventName: $.eventName.value,
+                eventDescription: $.eventDescription.value,
+                eventDate: $.eventDate.value,
+                groupId: Alloy.Globals.group_id
+            };
+            addEventReq.send(params);
+        } else alert("Event Incomplete!");
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "addevent";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -96,6 +110,7 @@ function Controller() {
         id: "__alloyId2"
     });
     $.__views.addEventWin.add($.__views.__alloyId2);
+    addEvent ? $.__views.__alloyId2.addEventListener("click", addEvent) : __defers["$.__views.__alloyId2!click!addEvent"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     var row = Ti.UI.createPickerRow();
@@ -111,6 +126,7 @@ function Controller() {
         } else alert(this.responseText);
     };
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
+    __defers["$.__views.__alloyId2!click!addEvent"] && $.__views.__alloyId2.addEventListener("click", addEvent);
     _.extend($, exports);
 }
 
