@@ -8,16 +8,20 @@
 		<Label id="groupname" top="10">James' Friends</Label>
 		<Label id="pageTitle" top="10">Settings</Label>
 		
-		<TextField id="addRole"  top="10"  width="250" height="30" hintText="Add new role"/>
+		<View layout="vertical">
+			<TableView id="table">
+	            <TableViewSection id="sectionFruit" headerTitle="Roles">
+	                <TableViewRow title="role 1"/>
+	                <TableViewRow title="role 2"/>
+	                <TableViewRow title="role 3"/>
+	            </TableViewSection>
+	        </TableView>
+        </View>
+        
+        <View layout="horizontal">
+        <TextField id="addRole"  top="10"  width="70%" hintText="Add new role"/>
 		<Button top="10">Add</Button>
-		
-		<TableView id="table">
-            <TableViewSection id="sectionFruit" headerTitle="Roles">
-                <TableViewRow title="role 1"/>
-                <TableViewRow title="role 2"/>
-                <TableViewRow title="role 3"/>
-            </TableViewSection>
-        </TableView>
+		</View>
 		
 	</Window>
 </Alloy>

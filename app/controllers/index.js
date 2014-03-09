@@ -4,7 +4,7 @@ function loadLogin(e)
 {
 	var win =Alloy.createController("signin").getView();
 	win.open();
-	
+	$.index.close();
 }
 
 function loadHomepage(e)

@@ -1,0 +1,7 @@
+<Alloy>
+	<TableViewRow height="Ti.UI.SIZE">
+		<View class="verticalRowContainer">
+			<Label id="name">row</Label>
+		</View>
+	</TableViewRow>
+</Alloy>

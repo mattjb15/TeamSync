@@ -1,5 +1,5 @@
 <Alloy>
-	<Window class="container" layout="vertical">
+	<Window class="container" layout="vertical" id="index">
 		
 		<Label id="signIn" top="10" onClick="loadLogin">Sign In</Label>
 		<Label id="homepage" top="10" onClick="loadHomepage">Hompage</Label>
@@ -8,6 +8,8 @@
 		<Label id="addEvent" top="10" onClick="loadAddEvent">Add Event</Label>
 		<Label id="addNotice" top="10" onClick="loadAddNotice">Add Notice</Label>
 		<Label id="Notices" top="10" onClick="loadNotices">Notices</Label>
+		<Label id="memberList" top="10" onClick="loadMemberList">Member List</Label>
+		<Label id="groupSettings" top="10" onClick="loadGroupSettings">Group Settings</Label>
 				
 	</Window>
 </Alloy>

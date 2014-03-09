@@ -1,0 +1,48 @@
+"#avatar":{
+	width: "50dp",
+	height: "50dp",
+	right: "0",
+	backgroundImage: "/man-silhouette.png"
+},
+
+"#searchIcon":{
+	width: "30dp",
+	height: "30dp",
+	left: "1%",
+	backgroundImage: "/Search-icon.png"
+},
+".Label": {
+	width: "100dp",
+	height: "100dp",
+}
+	
+
+"#searchLabel":{
+	
+	left: "10%",
+},
+
+"#invitesIcon":{
+	width: "30dp",
+	height: "30dp",
+	left: "30%",
+	backgroundImage: "/Email-3-icon.png"
+},
+
+"#invitesLabel":{
+	
+	left: "40%"
+},
+
+"#addGroupIcon":{
+	width: "30dp",
+	height: "30dp",
+	left: "60%",
+	backgroundImage: "/Plus-icon.png"
+},
+
+"#addGroupLabel":{
+	
+	left: "70%"
+}
+

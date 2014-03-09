@@ -42,7 +42,7 @@ function setdata()
     									groupId: Alloy.Globals.getGroupResults[i].groupId,
                                         groupName: Alloy.Globals.getGroupResults[i].groupName,
                                         groupDescription: Alloy.Globals.getGroupResults[i].groupDescription
-                                		}).getView();   // is this a hack? $model is the internal reference to the current model
+                                		}).getView(); 
 		$.mainList.appendRow(data[i]);
 	}
 	//$.mainList.setData(data);
@@ -51,6 +51,20 @@ function setdata()
 function loadaddgroup(e)
 {
 	var win = Alloy.createController("addeditgroup").getView();
+	win.open();
+	$.homepageWin.close();
+}
+
+function loaduseroptions(e)
+{
+	var win = Alloy.createController("useroptions").getView();
+	win.open();
+	Alloy.Globals.closeHomepage();
+}
+
+function loadmemberlist(e)
+{
+	var win = Alloy.createController("memberlist").getView();
 	win.open();
 	$.homepageWin.close();
 }

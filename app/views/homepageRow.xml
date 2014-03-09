@@ -1,27 +1,26 @@
 <Alloy>
 	<TableViewRow height="Ti.UI.SIZE">
-			<View class="verticalRowContainer">
-				<View id="topRowContainer">
-					<Label id="groupSettings">Group Settings</Label>
-					<View id="settingsImage"></View>
-					<Label id="joinRequests">Join Requests</Label>
-					<Label id="numberOfJoinRequests">1</Label>
+		<View class="verticalRowContainer">
+			<View id="topRowContainer">
+				<Label id="groupSettings">Group Settings</Label>
+				<View id="settingsImage"></View>
+				<Label id="joinRequests">Join Requests</Label>
+				<Label id="numberOfJoinRequests">1</Label>
+			</View>
+			<View id="middleRowContainer">
+				<View id="groupImage"></View>
+				<View id="innerMiddleContainer">
+					<Label id="GroupNameLabel">Group Name</Label>
+					<Label id="GroupDescriptionLabel">Some Made up group description text</Label>
 				</View>
-				<View id="middleRowContainer">
-					<View id="groupImage"></View>
-					
-					<View id="innerMiddleContainer">
-						<Label id="GroupNameLabel">Group Name</Label>
-						<Label id="GroupDescriptionLabel">Some Made up group description text</Label>
-					</View>						
-				
-				</View>
-				<View id="bottomRowContainer">
-					<Label id="events" onClick="loadGroupEvents">Events</Label>
-					<View id= "eventsImage"></View>
-					<Label id="notices" onClick="loadGroupNotices">Notices</Label>
-					<View id= "noticesImage"></View>
-				</View>
-			</View>						
-	</TableViewRow>			
+
+			</View>
+			<View id="bottomRowContainer">
+				<Label id="events" onClick="loadGroupEvents">Events</Label>
+				<View id= "eventsImage"></View>
+				<Label id="notices" onClick="loadGroupNotices">Notices</Label>
+				<View id= "noticesImage"></View>
+			</View>
+		</View>
+	</TableViewRow>
 </Alloy>
