@@ -4,19 +4,19 @@
 			<View id="appIcon"></View>
 			<Label id="welcomeMessage">Welcome username</Label>
 			<View id="avatar" onClick="loaduseroptions"></View>
-		</View>
-		<TableView id="mainList">
-			<TableViewRow>
-				<View class="rowContainer">
-					<View id="searchIcon"></View>
-					<Label id="searchLabel">Search</Label>
-					<View id="invitesIcon"></View>
-					<Label id="invitesLabel" onClick="loadmemberlist">Invites</Label>
-					<View id="addGroupIcon" onClick="loadaddgroup"></View>
-					<Label id="addGroupLabel" onClick="loadaddgroup">Add Group</Label>
-				</View>
-			</TableViewRow>
+		</View>	
+			<TableView id="mainList">
+				<TableViewRow>
+					<View class="rowContainer">	
+						<View id="searchIcon"></View>
+						<Label id="searchLabel">Search </Label>
+						<View id="invitesIcon"></View>
+						<Label id="invitesLabel">Invites </Label>
+						<View id="addGroupIcon" onClick="loadaddgroup"></View>
+						<Label id="addGroupLabel" onClick="loadaddgroup">Add Group </Label>
+					</View>	
+				</TableViewRow>
 
-		</TableView>
+			</TableView>
 	</Window>
 </Alloy>

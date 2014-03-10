@@ -62,9 +62,9 @@ function loaduseroptions(e)
 	Alloy.Globals.closeHomepage();
 }
 
-function loadmemberlist(e)
+function loadMemerList(e)
 {
 	var win = Alloy.createController("memberlist").getView();
 	win.open();
-	$.homepageWin.close();
+	
 }

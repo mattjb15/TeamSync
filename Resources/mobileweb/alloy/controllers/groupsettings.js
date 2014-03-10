@@ -56,8 +56,22 @@ function Controller() {
         top: "10"
     });
     $.__views.signupWin.add($.__views.pageTitle);
+<<<<<<< HEAD
     $.__views.__alloyId11 = Ti.UI.createView({
         layout: "vertical",
+=======
+    $.__views.addRole = Ti.UI.createTextField({
+        id: "addRole",
+        top: "10",
+        width: "250",
+        height: "30",
+        hintText: "Add new role"
+    });
+    $.__views.signupWin.add($.__views.addRole);
+    $.__views.__alloyId11 = Ti.UI.createButton({
+        title: "Add",
+        top: "10",
+>>>>>>> b4aa9bb7435d876b0d700cf25e28d55b2af14f1c
         id: "__alloyId11"
     });
     $.__views.signupWin.add($.__views.__alloyId11);
@@ -86,6 +100,7 @@ function Controller() {
         data: __alloyId12,
         id: "table"
     });
+<<<<<<< HEAD
     $.__views.__alloyId11.add($.__views.table);
     $.__views.__alloyId16 = Ti.UI.createView({
         layout: "horizontal",
@@ -105,6 +120,9 @@ function Controller() {
         id: "__alloyId17"
     });
     $.__views.__alloyId16.add($.__views.__alloyId17);
+=======
+    $.__views.signupWin.add($.__views.table);
+>>>>>>> b4aa9bb7435d876b0d700cf25e28d55b2af14f1c
     exports.destroy = function() {};
     _.extend($, $.__views);
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);

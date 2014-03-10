@@ -65,14 +65,14 @@ function Controller() {
         id: "groupImage"
     });
     $.__views.header.add($.__views.groupImage);
-    $.__views.__alloyId25 = Ti.UI.createButton({
+    $.__views.__alloyId26 = Ti.UI.createButton({
         title: "Add New Notice",
         top: "10",
         width: "75%",
-        id: "__alloyId25"
+        id: "__alloyId26"
     });
-    $.__views.noticesWin.add($.__views.__alloyId25);
-    loadAddNotice ? $.__views.__alloyId25.addEventListener("click", loadAddNotice) : __defers["$.__views.__alloyId25!click!loadAddNotice"] = true;
+    $.__views.noticesWin.add($.__views.__alloyId26);
+    loadAddNotice ? $.__views.__alloyId26.addEventListener("click", loadAddNotice) : __defers["$.__views.__alloyId26!click!loadAddNotice"] = true;
     $.__views.noticeList = Ti.UI.createTableView({
         top: "10",
         id: "noticeList"
@@ -109,7 +109,7 @@ function Controller() {
     };
     getNoticesReq.send(params);
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
-    __defers["$.__views.__alloyId25!click!loadAddNotice"] && $.__views.__alloyId25.addEventListener("click", loadAddNotice);
+    __defers["$.__views.__alloyId26!click!loadAddNotice"] && $.__views.__alloyId26.addEventListener("click", loadAddNotice);
     _.extend($, exports);
 }
 

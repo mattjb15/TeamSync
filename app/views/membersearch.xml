@@ -5,7 +5,7 @@
 			<Label id="welcomeMessage">Welcome username</Label>
 			<View id="avatar"></View>
 		</View>
-		<TextField id="search"  top="25"  width="75%" height="60" hintText="name"/>
+		<TextField id="search"  top="25"  width="75%" height="60" hintText="username"/>
 		<Button top="10" width="75%" onClick="doClick">Search</Button>
 		<TableView id="mainList">
 			

@@ -18,3 +18,9 @@ function loadGroupNotices(e)
 	win.open();
 	Alloy.Globals.closeHomepage();
 }
+
+function loadMemberList(e)
+{
+	var win = Alloy.createController("memberlist").getView();
+	win.open();
+}

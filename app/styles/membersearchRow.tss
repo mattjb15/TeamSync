@@ -155,7 +155,19 @@
 	width: "30dp",
 	height: "30dp",
 	backgroundImage: "/events.png"
+},
+
+"#name":{
+	font:{
+		fontSize: "15dp",
+	},
+	color:"black"
+},
+
+"#invite":{
+	right:"10dp"
 }
+
 
 
 

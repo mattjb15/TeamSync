@@ -1,13 +1,18 @@
 function Controller() {
     function doClick() {
+        var response;
         var url = "http://192.168.0.21/teamsync/getusers.php?search_string=" + $.search.value;
         var client = Ti.Network.createHTTPClient({
             onload: function() {
                 Ti.API.info("Received text: " + this.responseText);
+                response = JSON.parse(this.responseText);
+                Ti.API.info(response[0].firstName);
+                Ti.API.info(response[1].firstName);
+                Ti.API.info(response);
                 var data = [];
-                for (var i = 0; 5 > i; i++) {
+                for (var i = 0; response.length > i; i++) {
                     data[i] = Alloy.createController("membersearchRow", {
-                        names: this.responseText
+                        names: response[i]
                     }).getView();
                     $.mainList.appendRow(data[i]);
                 }
@@ -69,7 +74,7 @@ function Controller() {
         top: "25",
         width: "75%",
         height: "60",
-        hintText: "name"
+        hintText: "username"
     });
     $.__views.homepageWin.add($.__views.search);
     $.__views.__alloyId23 = Ti.UI.createButton({

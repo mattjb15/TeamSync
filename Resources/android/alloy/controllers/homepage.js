@@ -20,11 +20,6 @@ function Controller() {
         win.open();
         Alloy.Globals.closeHomepage();
     }
-    function loadmemberlist() {
-        var win = Alloy.createController("memberlist").getView();
-        win.open();
-        $.homepageWin.close();
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "homepage";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -106,7 +101,6 @@ function Controller() {
         id: "invitesLabel"
     });
     $.__views.__alloyId20.add($.__views.invitesLabel);
-    loadmemberlist ? $.__views.invitesLabel.addEventListener("click", loadmemberlist) : __defers["$.__views.invitesLabel!click!loadmemberlist"] = true;
     $.__views.addGroupIcon = Ti.UI.createView({
         width: "30dp",
         height: "30dp",
@@ -159,7 +153,6 @@ function Controller() {
     };
     getGroupsReq.send(params);
     __defers["$.__views.avatar!click!loaduseroptions"] && $.__views.avatar.addEventListener("click", loaduseroptions);
-    __defers["$.__views.invitesLabel!click!loadmemberlist"] && $.__views.invitesLabel.addEventListener("click", loadmemberlist);
     __defers["$.__views.addGroupIcon!click!loadaddgroup"] && $.__views.addGroupIcon.addEventListener("click", loadaddgroup);
     __defers["$.__views.addGroupLabel!click!loadaddgroup"] && $.__views.addGroupLabel.addEventListener("click", loadaddgroup);
     _.extend($, exports);

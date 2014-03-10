@@ -2,7 +2,7 @@
 	<TableViewRow height="Ti.UI.SIZE">
 		<View class="verticalRowContainer">
 			<View id="topRowContainer">
-				<Label id="groupSettings">Group Settings</Label>
+				<Label id="groupSettings" onClick="loadMemberList">Group Settings</Label>
 				<View id="settingsImage"></View>
 				<Label id="joinRequests">Join Requests</Label>
 				<Label id="numberOfJoinRequests">1</Label>

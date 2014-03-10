@@ -11,6 +11,10 @@ function Controller() {
         win.open();
         Alloy.Globals.closeHomepage();
     }
+    function loadMemberList() {
+        var win = Alloy.createController("memberlist").getView();
+        win.open();
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "homepageRow";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -47,6 +51,7 @@ function Controller() {
         id: "groupSettings"
     });
     $.__views.topRowContainer.add($.__views.groupSettings);
+    loadMemberList ? $.__views.groupSettings.addEventListener("click", loadMemberList) : __defers["$.__views.groupSettings!click!loadMemberList"] = true;
     $.__views.settingsImage = Ti.UI.createView({
         left: "5%",
         width: "30dp",
@@ -159,6 +164,7 @@ function Controller() {
     var args = arguments[0] || {};
     $.GroupNameLabel.text = args.groupName;
     $.GroupDescriptionLabel.text = args.groupDescription;
+    __defers["$.__views.groupSettings!click!loadMemberList"] && $.__views.groupSettings.addEventListener("click", loadMemberList);
     __defers["$.__views.events!click!loadGroupEvents"] && $.__views.events.addEventListener("click", loadGroupEvents);
     __defers["$.__views.notices!click!loadGroupNotices"] && $.__views.notices.addEventListener("click", loadGroupNotices);
     _.extend($, exports);

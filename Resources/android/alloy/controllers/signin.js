@@ -82,22 +82,22 @@ function Controller() {
         hintText: "Password"
     });
     $.__views.signinWin.add($.__views.password);
-    $.__views.__alloyId27 = Ti.UI.createButton({
-        title: "Sign In",
-        top: "10",
-        width: "75%",
-        id: "__alloyId27"
-    });
-    $.__views.signinWin.add($.__views.__alloyId27);
-    login ? $.__views.__alloyId27.addEventListener("click", login) : __defers["$.__views.__alloyId27!click!login"] = true;
     $.__views.__alloyId28 = Ti.UI.createButton({
-        title: "Sign Up",
+        title: "Sign In",
         top: "10",
         width: "75%",
         id: "__alloyId28"
     });
     $.__views.signinWin.add($.__views.__alloyId28);
-    loadSignup ? $.__views.__alloyId28.addEventListener("click", loadSignup) : __defers["$.__views.__alloyId28!click!loadSignup"] = true;
+    login ? $.__views.__alloyId28.addEventListener("click", login) : __defers["$.__views.__alloyId28!click!login"] = true;
+    $.__views.__alloyId29 = Ti.UI.createButton({
+        title: "Sign Up",
+        top: "10",
+        width: "75%",
+        id: "__alloyId29"
+    });
+    $.__views.signinWin.add($.__views.__alloyId29);
+    loadSignup ? $.__views.__alloyId29.addEventListener("click", loadSignup) : __defers["$.__views.__alloyId29!click!loadSignup"] = true;
     $.__views.resetPassword = Ti.UI.createLabel({
         text: "Reset password...",
         id: "resetPassword",
@@ -119,8 +119,8 @@ function Controller() {
         } else alert(response.message);
     };
     __defers["$.__views.appIcon!click!Alloy.Globals.loadIndex"] && $.__views.appIcon.addEventListener("click", Alloy.Globals.loadIndex);
-    __defers["$.__views.__alloyId27!click!login"] && $.__views.__alloyId27.addEventListener("click", login);
-    __defers["$.__views.__alloyId28!click!loadSignup"] && $.__views.__alloyId28.addEventListener("click", loadSignup);
+    __defers["$.__views.__alloyId28!click!login"] && $.__views.__alloyId28.addEventListener("click", login);
+    __defers["$.__views.__alloyId29!click!loadSignup"] && $.__views.__alloyId29.addEventListener("click", loadSignup);
     _.extend($, exports);
 }
 
