@@ -1,0 +1,36 @@
+".firstName":{
+	font:{
+		color: "black"
+	}
+}
+
+".lastName":{
+	font:{
+		color: "black"
+	}
+}
+
+".password":{
+	font:{
+		color: "black"
+	}
+}
+
+".CurrentPassword":{
+	font:{
+		color: "black"
+	}
+}
+
+".confirmPassword":{
+	font:{
+		color: "black"
+	}
+}
+
+"#avatar":{
+	width: "50dp",
+	height: "50dp",
+	right: "0",
+	backgroundImage: "/man-silhouette.png"
+}

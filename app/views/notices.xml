@@ -1,0 +1,16 @@
+
+<Alloy>
+	<Window class="container" layout="vertical" id="noticesWin">
+		<View id="header">
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
+			<Label id="pageTitle" onClick="loadGroupHomepage">Notices for group name </Label>
+			<View id="groupImage"></View>
+		</View>	
+		
+		<Button top="10" width="75%" onClick="loadAddNotice">Add New Notice</Button>
+		
+			<TableView top="10" id="noticeList">
+
+			</TableView>
+	</Window>
+</Alloy>

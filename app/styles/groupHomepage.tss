@@ -1,0 +1,57 @@
+"#avatar":{
+	width: "50dp",
+	height: "50dp",
+	right: "0",
+	backgroundImage: "/man-silhouette.png"
+},
+
+
+"#groupName":{
+	top: "15",
+	font:{
+    	fontSize: "18dp",
+        fontWeight: "bold"
+    }
+}
+
+"#groupDescription":{
+	top: "15",
+	font:{
+    	fontSize: "16dp",
+        fontWeight: "bold"
+    }
+}
+
+"#view1":{
+	top: "25",
+	left: "0"
+}
+
+"#view2":{
+	top: "-100",
+	right: "0"
+}
+"#view3":{
+	top: "25",
+	left: "0"
+}
+"#view4":{
+	top: "-100",
+	right: "0"
+}
+"#view5":{
+	top: "25",
+	left: "0"
+}
+"#view6":{
+	top: "-100",
+	right: "0"
+}
+
+
+".groupContainer":{
+	layout: "vertical",	
+	height: Ti.UI.FILL,
+	width:225
+}
+

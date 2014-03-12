@@ -1,0 +1,28 @@
+"#groupImage":{
+	width: "50dp",
+	height: "50dp",
+	right: "0",
+	backgroundImage: "/groupImage.png"
+},
+
+".eventName":{
+	left:"5dp",
+	font: {
+        fontSize: "16dp",
+        fontWeight: "bold"
+    }
+},
+
+".eventDescription":{
+	left:"5dp",
+  
+},
+
+".eventDateLabel":{
+	left:"5dp",
+
+},
+
+".eventDate":{
+	left:"5dp", 
+}

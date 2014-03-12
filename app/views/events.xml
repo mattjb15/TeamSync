@@ -1,0 +1,15 @@
+
+<Alloy>
+	<Window class="container" layout="vertical" id="eventsWin">
+		<View id="header">
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
+			<Label id="pageTitle" onClick="loadGroupHomepage">Events for group name </Label>
+			<View id="groupImage"></View>
+		</View>	
+				<Button top="10" width="75%" onClick="loadAddEvent">Add New Event</Button>
+		
+			<TableView top="10" id="eventList">
+
+			</TableView>
+	</Window>
+</Alloy>

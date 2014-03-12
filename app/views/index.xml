@@ -1,0 +1,13 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		
+		<Label id="signIn" top="10" onClick="loadLogin">Sign In</Label>
+		<Label id="homepage" top="10" onClick="loadHomepage">Hompage</Label>
+		<Label id="addEditGroup" top="10" onClick="loadAddeditgroup">Add Edit Group</Label>
+		<Label id="signUp" top="10" onClick="loadSignup">Sign Up</Label>
+		<Label id="addEvent" top="10" onClick="loadAddEvent">Add Event</Label>
+		<Label id="addNotice" top="10" onClick="loadAddNotice">Add Notice</Label>
+		<Label id="Notices" top="10" onClick="loadNotices">Notices</Label>
+		<Label id="groupHomepage" top="10" onClick="loadgroupHomepage">Group Homepage</Label>
+	</Window>
+</Alloy>

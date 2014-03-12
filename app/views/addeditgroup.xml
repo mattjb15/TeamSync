@@ -1,0 +1,13 @@
+<Alloy>
+	<Window class="container" layout="vertical" id="addGroupWin">
+		<View id="header">
+			<View id="appIcon" onClick="Alloy.Globals.loadIndex"></View>
+			<Label id="appTitle">TeamSync</Label>
+		</View>	
+		
+		<Label id="pageTitle" top="10">Add/Edit Group</Label>
+			 <TextField id="GroupName"/>
+			 <TextField  id="GroupDescription"/>
+		<Button top="10" width="75%" onClick="addGroup">Add Group</Button>
+	</Window>
+</Alloy>

@@ -1,0 +1,11 @@
+<Alloy>
+	<TableViewRow height="Ti.UI.SIZE" layout="vertical">
+				<Label class="eventName">Event Name </Label>
+				<Label class="eventDescription">Event description Event description Event description </Label>
+				<View  height="Ti.UI.SIZE" layout="horizontal">
+					<Label class="eventDateLabel">Date: </Label>
+					<Label class="eventDate">00/00/0000 </Label>
+				</View>
+	</TableViewRow>				
+</Alloy>
+
